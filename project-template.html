@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDIT ME: page title shown in the browser tab -->
+  <title>Project Title — Your Name</title>
+  <meta name="description" content="One-line description of this project.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+  <!-- =========================================================
+       HOW TO ADD A NEW PROJECT PAGE
+       1. Duplicate this file and rename it, e.g. project-04.html
+       2. Fill in every "EDIT ME" spot below with your content.
+       3. Replace .img-placeholder divs with real <img> tags once
+          you have photos (see the commented example near the hero
+          image below).
+       4. Update the "prev / next" links at the bottom of the page
+          so this project connects to the ones before/after it.
+       5. Add a matching <a class="project-card"> block on the
+          homepage (index.html) so people can find this page.
+       That's it — no build step, no other files to touch.
+       ========================================================= -->
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Your Name</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT HEADER + SPEC STRIP
+       The spec strip is the small row that lists role,
+       tools, and year at a glance — edit the values, not the
+       labels, unless you want to change the categories entirely.
+       ========================================================= -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>Project Title Goes Here</h1>
+      <p class="lede">
+        EDIT ME — a one-sentence summary of the project: what it is
+        and why it matters. This shows right under the title.
+      </p>
+
+      <div class="spec-strip">
+        <span><span class="spec-label">Role:</span> Your role</span>
+        <span><span class="spec-label">Tools:</span> Tool, Tool, Tool</span>
+        <span><span class="spec-label">Timeline:</span> Month–Month Year</span>
+        <span><span class="spec-label">Team:</span> Solo / Team of N</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HERO IMAGE
+       Replace the placeholder div with something like:
+         <img src="project-04-hero.jpg"
+              alt="Describe what's shown in the photo">
+       ========================================================= -->
+  <section class="container">
+    <div class="img-placeholder hero-placeholder">
+      [ Hero image placeholder ]<br>
+      project-04-hero.jpg<br>
+      (recommended 1600×900)
+    </div>
+  </section>
+
+  <!-- =========================================================
+       OVERVIEW
+       Free-form project description. Keep paragraphs short.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Overview</h2>
+      </div>
+      <div class="prose">
+        <p>
+          EDIT ME — describe the problem this project addressed, your
+          approach, and how it was built or tested. Two to four short
+          paragraphs is usually enough; link out to a repo, paper, or
+          video if you have one.
+        </p>
+        <p>
+          Second paragraph — go into a specific technical decision or
+          constraint you had to work around. Specificity is what makes
+          a project page interesting to read.
+        </p>
+      </div>
+
+      <!-- =====================================================
+           DETAIL COLUMNS
+           Three short columns for challenge / approach / outcome.
+           Delete this block if it doesn't fit your project.
+           ===================================================== -->
+      <div class="detail-columns">
+        <div>
+          <h3>Challenge</h3>
+          <p class="prose">EDIT ME — the core constraint or problem.</p>
+        </div>
+        <div>
+          <h3>Approach</h3>
+          <p class="prose">EDIT ME — how you solved it.</p>
+        </div>
+        <div>
+          <h3>Outcome</h3>
+          <p class="prose">EDIT ME — the result, with a number if you have one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALLERY
+       A simple 2-column grid of supporting images. Duplicate the
+       .gallery-placeholder divs to add more; delete extras if you
+       only need one or two.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="img-placeholder gallery-placeholder">
+          [ Gallery image 1 ]<br>project-04-gallery-1.jpg
+        </div>
+        <div class="img-placeholder gallery-placeholder">
+          [ Gallery image 2 ]<br>project-04-gallery-2.jpg
+        </div>
+        <div class="img-placeholder gallery-placeholder">
+          [ Gallery image 3 ]<br>project-04-gallery-3.jpg
+        </div>
+        <div class="img-placeholder gallery-placeholder">
+          [ Gallery image 4 ]<br>project-04-gallery-4.jpg
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PREV / NEXT PROJECT NAVIGATION
+       EDIT ME — point these at the actual projects before/after
+       this one in your list. Remove a link (leave the <div> and
+       an empty <span>) if this is the first or last project.
+       ========================================================= -->
+  <section class="container">
+    <nav class="project-pager">
+      <a href="project-02.html">
+        <span class="pager-dir">← Previous</span>
+        Project Two Title
+      </a>
+      <a href="projects.html">
+        <span class="pager-dir">All projects</span>
+        Back to projects
+      </a>
+    </nav>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Your Name</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:you@example.com">Email</a></li>
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Your Name.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

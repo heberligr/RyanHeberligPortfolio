@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Your Name</title>
+  <meta name="description" content="All projects, summarized.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+  <!-- =========================================================
+       HOW TO KEEP THIS PAGE IN SYNC WITH index.html
+       Every project card on the homepage should have a matching
+       .project-entry block here, pointing at the exact same HTML
+       file. The difference is just format: the homepage
+       shows a picture + skills tags, this page shows a full
+       paragraph so someone can read the whole project without
+       clicking through.
+       To add a project: duplicate one <article class="project-entry">
+       block, update the title/link/skills, and write a paragraph
+       that covers the problem, your approach, and the outcome.
+       ========================================================= -->
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Your Name</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p class="lede">
+        A quick summary of each project below — read it here, or
+        click through to a project for photos and full detail.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- =====================================================
+           PROJECT ENTRY 1
+           ===================================================== -->
+      <article class="project-entry">
+        <div class="entry-header">
+          <h2><a href="project-01.html">Project One Title</a></h2>
+          <ul class="skills-tags">
+            <li>SolidWorks</li>
+            <li>CNC Machining</li>
+            <li>GD&amp;T</li>
+          </ul>
+        </div>
+        <p class="prose">
+          EDIT ME — write two to four sentences that cover the whole
+          project: what problem it solved, the approach you took, the
+          tools involved, and the outcome or result. The goal is that
+          someone can read just this paragraph and walk away knowing
+          everything important about the project, without needing to
+          open the full page.
+        </p>
+        <a href="project-01.html" class="text-link">View full project</a>
+      </article>
+
+      <!-- =====================================================
+           PROJECT ENTRY 2
+           ===================================================== -->
+      <article class="project-entry">
+        <div class="entry-header">
+          <h2><a href="project-02.html">Project Two Title</a></h2>
+          <ul class="skills-tags">
+            <li>ANSYS / FEA</li>
+            <li>Thermal Analysis</li>
+            <li>MATLAB</li>
+          </ul>
+        </div>
+        <p class="prose">
+          EDIT ME — write two to four sentences that cover the whole
+          project: what problem it solved, the approach you took, the
+          tools involved, and the outcome or result. The goal is that
+          someone can read just this paragraph and walk away knowing
+          everything important about the project, without needing to
+          open the full page.
+        </p>
+        <a href="project-02.html" class="text-link">View full project</a>
+      </article>
+
+      <!-- =====================================================
+           PROJECT ENTRY 3 (placeholder — points at the blank
+           template; duplicate project-template.html to make this
+           a real project, then update this entry to match)
+           ===================================================== -->
+      <article class="project-entry">
+        <div class="entry-header">
+          <h2><a href="project-template.html">Add Your Next Project</a></h2>
+          <ul class="skills-tags">
+            <li>Add a skill</li>
+            <li>Add a skill</li>
+          </ul>
+        </div>
+        <p class="prose">
+          EDIT ME — this entry is a placeholder pointing at the blank
+          project template. Duplicate <code>project-template.html</code>
+          to start a new project page, then replace this paragraph and
+          the link above with the real project.
+        </p>
+        <a href="project-template.html" class="text-link">View full project</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Your Name</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:you@example.com">Email</a></li>
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Your Name.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

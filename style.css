@@ -1,0 +1,686 @@
+/* =============================================================
+   ENGINEERING PORTFOLIO — STYLESHEET
+   =============================================================
+   How this file is organized (search for these headers):
+     1. FONT IMPORT
+     2. DESIGN TOKENS (colors, type, spacing) — edit these first
+     3. RESET & BASE ELEMENTS
+     4. LAYOUT HELPERS (.container, .section, grids)
+     5. NAV BAR
+     6. HERO
+     7. CONTACT STRIP (row of contact details under the hero)
+     8. SPEC STRIP (small "role / tools / timeline" meta row)
+     9. PROJECT CARDS (used on the homepage grid)
+     10. SKILLS TAGS (pill list of skills used on a project)
+     11. IMAGE PLACEHOLDERS (dashed boxes — swap for real <img> later)
+     12. SKILLS GROUPS (used on the résumé page)
+     13. BUTTONS & LINKS
+     14. FOOTER
+     15. PROJECT PAGE SPECIFICS (prev/next nav, detail sections)
+     16. PROJECTS LIST PAGE (paragraph format)
+     17. RÉSUMÉ ENTRIES
+     18. RESPONSIVE (mobile) RULES
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   1. FONT IMPORT
+   A single type family for the whole site — hierarchy comes from
+   weight and size, not from mixing typefaces.
+   ------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* -------------------------------------------------------------
+   2. DESIGN TOKENS
+   Change colors/fonts/spacing here and they update everywhere.
+   ------------------------------------------------------------- */
+:root {
+  /* --- base colors (light sections) --- */
+  --color-bg:          #EFEAE0; /* page background — warm sand, not stark white */
+  --color-surface:     #FFFFFF; /* cards — white, so they lift off the warm bg */
+  --color-ink:         #201C17; /* primary text — warm near-black */
+  --color-ink-soft:    #6B6459; /* secondary / muted text */
+  --color-border:      #E1D9C9; /* hairline borders, warm-toned to match bg */
+  --color-accent:      #1B6B63; /* deep teal accent — links, hover states, one CTA color */
+  --color-accent-dark: #124F49; /* accent hover/active on light backgrounds */
+  --color-accent-soft: #DCEBE8; /* light accent tint for skill-tag pills */
+
+  /* --- dark sections (nav, hero, footer) --- */
+  --color-dark-bg:      #23201B; /* warm charcoal, not navy — ties to the sand tones above */
+  --color-dark-border:  rgba(255, 255, 255, 0.12);
+  --color-dark-text:    #F6F3EC;
+  --color-dark-text-soft: #B8AF9E;
+  --color-accent-bright: #5FC2B6; /* brighter teal, used for accents on dark backgrounds */
+
+  /* --- typography --- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* --- layout --- */
+  --content-width: 1120px;   /* max width of the page container */
+  --text-width:    68ch;     /* max width for readable paragraph text */
+  --radius:        8px;      /* standard corner radius for cards/buttons */
+  --radius-pill:   999px;    /* fully rounded, used for skill tags */
+
+  /* --- spacing scale (multiples of 8px) --- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+}
+
+
+/* -------------------------------------------------------------
+   3. RESET & BASE ELEMENTS
+   ------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  line-height: 1.2;
+  margin: 0 0 var(--space-2) 0;
+  font-weight: 600;
+}
+
+h1 { font-size: clamp(2.1rem, 3.6vw, 3rem); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.4rem, 2.2vw, 1.8rem); }
+h3 { font-size: 1.1rem; font-weight: 600; }
+
+p { margin: 0 0 var(--space-2) 0; }
+
+a { color: inherit; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+img { max-width: 100%; display: block; }
+
+/* generic utility: constrains a text block to a comfortable reading width */
+.prose { max-width: var(--text-width); color: var(--color-ink-soft); }
+.prose p { margin-bottom: var(--space-3); }
+
+/* generic spacing utility, used sparingly instead of inline styles */
+.mt-lg { margin-top: var(--space-5); }
+
+
+/* -------------------------------------------------------------
+   4. LAYOUT HELPERS
+   ------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.section {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section:last-of-type { border-bottom: none; }
+
+.section-heading {
+  margin-bottom: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+
+/* -------------------------------------------------------------
+   5. NAV BAR
+   Dark, sticky bar used identically on every page — bookends the
+   page together with the hero and footer below.
+   ------------------------------------------------------------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-dark-bg);
+  border-bottom: 1px solid var(--color-dark-border);
+}
+
+.site-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.site-nav .brand {
+  font-weight: 600;
+  color: var(--color-dark-text);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--color-dark-text-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.is-active {
+  color: var(--color-dark-text);
+  border-bottom-color: var(--color-accent-bright);
+}
+
+.nav-toggle { display: none; } /* shown only on mobile, see section 18 */
+
+
+/* -------------------------------------------------------------
+   6. HERO
+   Dark band matching the nav — the headline moment on every page.
+   ------------------------------------------------------------- */
+.hero {
+  background: var(--color-dark-bg);
+  padding: var(--space-7) 0 var(--space-6);
+  border-bottom: 1px solid var(--color-dark-border);
+}
+
+.hero h1 { max-width: 20ch; color: var(--color-dark-text); }
+
+/* the one deliberately colorful moment on the page — a person's
+   role, styled larger than a typical subtitle */
+.role-line {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-accent-bright);
+  margin: 2px 0 var(--space-3) 0;
+}
+
+.hero .lede {
+  max-width: 56ch;
+  color: var(--color-dark-text-soft);
+  font-size: 1.05rem;
+  margin-top: var(--space-2);
+}
+
+.hero .hero-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* shorter hero variant used when a spec strip, contact strip, or
+   button row sits right below and needs less breathing room */
+.hero--compact { padding-bottom: var(--space-4); }
+
+
+/* -------------------------------------------------------------
+   7. CONTACT STRIP
+   The row of contact details just below the hero heading, used
+   on the homepage and the résumé page.
+   ------------------------------------------------------------- */
+.contact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  list-style: none;
+  margin: var(--space-4) 0 0 0;
+  padding: var(--space-3) 0 0 0;
+  border-top: 1px solid var(--color-dark-border);
+}
+
+.contact-strip li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  color: var(--color-dark-text-soft);
+}
+
+.contact-strip a,
+.contact-strip span:not(.contact-label) {
+  font-size: 0.95rem;
+  color: var(--color-dark-text);
+  text-decoration: none;
+}
+
+.contact-strip a { border-bottom: 1px solid var(--color-dark-border); }
+.contact-strip a:hover { border-bottom-color: var(--color-accent-bright); color: var(--color-accent-bright); }
+
+
+/* -------------------------------------------------------------
+   8. SPEC STRIP
+   The small row that lists role, tools, and timeline for a
+   project at a glance.
+   ------------------------------------------------------------- */
+.spec-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: 0.88rem;
+  color: var(--color-dark-text-soft);
+  border-top: 1px solid var(--color-dark-border);
+  border-bottom: 1px solid var(--color-dark-border);
+  padding: var(--space-2) 0;
+  margin: var(--space-3) 0 var(--space-5);
+}
+
+.spec-strip span { white-space: nowrap; }
+
+.spec-strip .spec-label {
+  color: var(--color-dark-text);
+  font-weight: 500;
+}
+
+
+/* -------------------------------------------------------------
+   9. PROJECT CARDS (homepage grid)
+   ------------------------------------------------------------- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: 0 12px 24px -18px rgba(29, 33, 36, 0.35);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.project-card .thumb {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.project-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover .thumb img { transform: scale(1.03); }
+
+.project-card .card-body {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.project-card h3 { margin-bottom: 0; }
+
+
+/* -------------------------------------------------------------
+   10. SKILLS TAGS
+   Small pills listing the skills used on a project — shown on
+   homepage cards, the projects list page, and résumé skills.
+   ------------------------------------------------------------- */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-tags li {
+  font-size: 0.78rem;
+  color: var(--color-accent-dark);
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+}
+
+
+/* -------------------------------------------------------------
+   11. IMAGE PLACEHOLDERS
+   Dashed boxes marking exactly where to drop in real photos.
+   Delete the placeholder text/class once a real <img> is added.
+   ------------------------------------------------------------- */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2);
+  background: #E4DCC9;
+  border: 1.5px dashed var(--color-border);
+  color: var(--color-ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.img-placeholder.hero-placeholder {
+  aspect-ratio: 16 / 8;
+  min-height: 280px;
+}
+
+.img-placeholder.gallery-placeholder {
+  aspect-ratio: 4 / 3;
+}
+
+
+/* -------------------------------------------------------------
+   12. SKILLS GROUPS
+   Reusable label + chip-list pattern, used on the résumé page.
+   ------------------------------------------------------------- */
+.skills-group { margin-bottom: var(--space-4); }
+
+.skills-group h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+
+/* -------------------------------------------------------------
+   13. BUTTONS & LINKS
+   ------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--color-accent); }
+
+.btn-outline {
+  border-color: var(--color-border);
+  color: var(--color-ink);
+  background: var(--color-surface);
+}
+.btn-outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+/* variant for buttons that sit on a dark background (e.g. inside
+   the hero) — light fill so it stays visible against dark bg */
+.btn-on-dark {
+  background: var(--color-accent-bright);
+  color: var(--color-dark-bg);
+}
+.btn-on-dark:hover { background: #7ED4C9; }
+
+.text-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 3px;
+}
+.text-link:hover { text-decoration-color: var(--color-accent); }
+
+
+/* -------------------------------------------------------------
+   14. FOOTER
+   Dark band matching the nav and hero — bookends the page.
+   ------------------------------------------------------------- */
+.site-footer {
+  background: var(--color-dark-bg);
+  padding: var(--space-5) 0 var(--space-4);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-dark-border);
+}
+
+.footer-top .footer-name {
+  font-weight: 600;
+  color: var(--color-dark-text);
+  margin-bottom: 2px;
+}
+
+.footer-top .footer-tagline {
+  color: var(--color-dark-text-soft);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  color: var(--color-dark-text-soft);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+.footer-links a:hover { color: var(--color-accent-bright); }
+
+.footer-bottom {
+  padding-top: var(--space-3);
+  color: var(--color-dark-text-soft);
+  font-size: 0.82rem;
+}
+
+
+/* -------------------------------------------------------------
+   15. PROJECT PAGE SPECIFICS
+   ------------------------------------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+.detail-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.detail-columns h3 {
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-1);
+}
+
+.project-pager {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+}
+
+.project-pager a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+.project-pager a:hover { color: var(--color-accent); }
+.project-pager .pager-dir { display: block; font-size: 0.78rem; margin-bottom: 2px; color: var(--color-ink-soft); }
+
+
+/* -------------------------------------------------------------
+   16. PROJECTS LIST PAGE (paragraph format)
+   Used on projects.html: one .project-entry per project, each
+   with a heading + skills tags + a paragraph summary + a link
+   through to the same file the homepage card points at.
+   ------------------------------------------------------------- */
+.project-entry {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.project-entry:last-of-type { border-bottom: none; }
+
+.entry-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.entry-header h2 { margin-bottom: 0; font-size: 1.25rem; }
+
+.entry-header h2 a {
+  text-decoration: none;
+  color: var(--color-ink);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.entry-header h2 a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.project-entry .prose { margin-bottom: var(--space-2); }
+
+
+/* -------------------------------------------------------------
+   17. RÉSUMÉ ENTRIES
+   Used on resume.html for each job and education entry.
+   ------------------------------------------------------------- */
+.resume-entry { margin-bottom: var(--space-4); }
+
+.resume-entry-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.resume-entry-header h3 { margin-bottom: 2px; }
+
+.resume-dates {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+
+.resume-org {
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.resume-bullets {
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--color-ink-soft);
+}
+.resume-bullets li { margin-bottom: 6px; }
+.resume-bullets li:last-child { margin-bottom: 0; }
+
+
+/* -------------------------------------------------------------
+   18. RESPONSIVE (MOBILE) RULES
+   ------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .detail-columns { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .contact-strip { gap: var(--space-3); }
+  .footer-top { flex-direction: column; }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--color-dark-bg);
+    flex-direction: column;
+    padding: var(--space-2) var(--space-3) var(--space-3);
+    gap: var(--space-2);
+    display: none;
+    border-bottom: 1px solid var(--color-dark-border);
+  }
+  .nav-links.is-open { display: flex; }
+
+  .nav-toggle {
+    display: inline-flex;
+    background: none;
+    border: 1px solid var(--color-dark-border);
+    color: var(--color-dark-text);
+    border-radius: var(--radius);
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résumé — Your Name</title>
+  <meta name="description" content="Résumé.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="resume">
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Your Name</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       RÉSUMÉ HEADER
+       EDIT ME — name, title, and contact line. If you'd rather
+       not maintain a separate PDF, this page can be the résumé;
+       the download button below is optional.
+       ========================================================= -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>Your Name</h1>
+      <p class="role-line">Mechanical Engineer — City, State</p>
+
+      <ul class="contact-strip">
+        <li><span class="contact-label">Email</span><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><span class="contact-label">Phone</span><a href="tel:+15555555555">(555) 555-5555</a></li>
+        <li><span class="contact-label">LinkedIn</span><a href="#" target="_blank" rel="noopener">linkedin.com/in/yourname</a></li>
+      </ul>
+
+      <div class="hero-actions">
+        <!-- OPTIONAL: put a PDF at /resume/resume.pdf and this
+             button will offer it as a download. Delete this <a>
+             entirely if you'd rather this webpage be the only
+             version of your résumé. -->
+        <a href="resume.pdf" class="btn btn-on-dark" target="_blank" rel="noopener">Download as PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SUMMARY
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Summary</h2></div>
+      <p class="prose">
+        EDIT ME — two or three sentences summarizing your experience,
+        discipline, and what you're looking for next. Keep it specific:
+        the kind of problems you solve and the tools you use, not
+        general praise words.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EXPERIENCE
+       Each .resume-entry is one job. To add another, duplicate
+       the whole <article> block and fill in the new details.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Experience</h2></div>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Mechanical Engineer</h3>
+          <span class="resume-dates">Month Year – Present</span>
+        </div>
+        <p class="resume-org">Company Name — City, State</p>
+        <ul class="resume-bullets">
+          <li>EDIT ME — a specific accomplishment, ideally with a number (e.g. "Reduced part cost by 18% by redesigning the bracket for CNC machining instead of casting").</li>
+          <li>EDIT ME — another accomplishment or responsibility.</li>
+          <li>EDIT ME — another accomplishment or responsibility.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Mechanical Engineering Intern</h3>
+          <span class="resume-dates">Month Year – Month Year</span>
+        </div>
+        <p class="resume-org">Company Name — City, State</p>
+        <ul class="resume-bullets">
+          <li>EDIT ME — a specific accomplishment, ideally with a number.</li>
+          <li>EDIT ME — another accomplishment or responsibility.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EDUCATION
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Education</h2></div>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Degree, Major</h3>
+          <span class="resume-dates">Graduation Year</span>
+        </div>
+        <p class="resume-org">University Name — City, State</p>
+        <ul class="resume-bullets">
+          <li>EDIT ME — GPA, honors, relevant coursework, or a notable capstone project.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SKILLS
+       Grouped the same way as elsewhere on the site — duplicate
+       a .skills-group to add a category, or a <li> to add a skill.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Skills</h2></div>
+
+      <div class="grid grid-3">
+        <div class="skills-group">
+          <h3>Design &amp; analysis</h3>
+          <ul class="skills-chips">
+            <li>SolidWorks</li>
+            <li>AutoCAD</li>
+            <li>FEA / ANSYS</li>
+            <li>GD&amp;T</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Programming &amp; tools</h3>
+          <ul class="skills-chips">
+            <li>Python</li>
+            <li>C++</li>
+            <li>MATLAB</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Fabrication &amp; hardware</h3>
+          <ul class="skills-chips">
+            <li>CNC machining</li>
+            <li>3D printing</li>
+            <li>Welding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Your Name</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:you@example.com">Email</a></li>
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Your Name.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
