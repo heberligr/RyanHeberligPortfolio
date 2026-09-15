@@ -684,3 +684,10 @@ img { max-width: 100%; display: block; }
     cursor: pointer;
   }
 }
+
+.center-img {
+  display: block;           /* Makes the image a block element */
+  margin-left: auto;        /* Auto margins center it horizontally */
+  margin-right: auto;
+  width: 50%;               /* Optional: control image size */
+}
