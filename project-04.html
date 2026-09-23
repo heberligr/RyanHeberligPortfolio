@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDIT ME: page title shown in the browser tab -->
+  <title>DIY Nerf Gun — Ryan Heberlig</title>
+  <meta name="description" content="A fully custom spring-piston pneumatic dart blaster, designed from scratch and currently in progress.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+  <!-- =========================================================
+       HOW TO ADD A NEW PROJECT PAGE
+       1. Duplicate this file and rename it, e.g. project-05.html
+       2. Fill in every "EDIT ME" spot below with your content.
+       3. Replace .img-placeholder divs with real <img> tags once
+          you have photos (see the commented example near the hero
+          image below).
+       4. Update the "prev / next" links at the bottom of the page
+          so this project connects to the ones before/after it.
+       5. Add a matching card on the homepage (index.html) AND a
+          matching entry on projects.html — under "Currently
+          Working On" if it's not finished yet, or under
+          "Projects" once it's done. See the comments in both
+          files for the section-by-section format.
+       That's it — no build step, no other files to touch.
+       ========================================================= -->
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Ryan Heberlig</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT HEADER + SPEC STRIP
+       The spec strip is the small row that lists role,
+       tools, and year at a glance — edit the values, not the
+       labels, unless you want to change the categories entirely.
+       "Status" is an extra field used on in-progress projects;
+       drop it (or change it to a date) once the project is done.
+       ========================================================= -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>DIY Nerf Gun</h1>
+      <p class="lede">
+        A fully custom spring-piston pneumatic foam dart blaster, designed
+        from scratch in CAD and currently being prototyped and tested
+        piece by piece.
+      </p>
+
+      <div class="spec-strip">
+        <span><span class="spec-label">Role:</span> Solo Project</span>
+        <span><span class="spec-label">Tools:</span> SolidWorks, FDM 3D Printing</span>
+        <span><span class="spec-label">Date:</span> 2026 — Ongoing</span>
+        <span><span class="spec-label">Status:</span> In Progress</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HERO IMAGE / VIDEO
+       Main visual for this project: a cutaway CAD view of the
+       internal spring-piston mechanism. Swap for a demo video or
+       photo of the finished blaster once it's built and firing.
+       ========================================================= -->
+  <section class="container">
+    <img src="nerf-thumb.png" alt="Cutaway CAD view of the spring-piston blaster mechanism, showing the plunger, spring, and air chamber inside the frame" class="hero-media">
+  </section>
+
+  <!-- =========================================================
+       OVERVIEW
+       Free-form project description. Keep paragraphs short.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Overview</h2>
+      </div>
+      <div class="prose prose--centered">
+        <p>
+          This is a personal project I'm currently working on: a
+          fully custom, spring-piston pneumatic foam dart blaster designed
+          from the ground up in SolidWorks — no kits, no existing
+          blaster internals, just a grip frame and air system built
+          from scratch.
+        </p>
+        <p>
+          The mechanism works like a small pneumatic pump: pulling
+          back the plunger tube compresses a spring against a
+          sealed air chamber, and releasing it drives the plunger
+          forward to push a burst of air (and a dart) out through the
+          barrel. I've been 3D printing and iterating on the plunger tube, o-ring seal,
+          and spring mount to get a tight, low-friction fit that can
+          survive repeated cycling without cracking or leaking air. Also beginning work on a 
+          slide and trigger system.
+        </p>
+        <p>
+          Right now I'm at the prototyping stage: the air chamber and
+          plunger assembly have been printed and test-fit (cycled
+          by hand instead of with a mechanism), and I've begun development of a reliable
+          slide and trigger system. CAD for the
+          full outer pistol-style housing is finished and ready to print
+         but might change as internal mechanisms develop (mounting of mechanisms still needed).
+        </p>
+      </div>
+
+      <!-- =====================================================
+           DETAIL COLUMNS
+           "Status" is used here instead of "Outcome" since this
+           project isn't finished yet — swap it back to "Outcome"
+           once it's complete.
+           ===================================================== -->
+      <div class="detail-columns">
+        <div>
+          <h3>Challenge</h3>
+          <p class="prose">Designing a plunger and air-chamber seal that builds up enough pressure to fire reliably, without leaking air or binding as it cycles.</p>
+        </div>
+        <div>
+          <h3>Approach</h3>
+          <p class="prose">Modeled the full blaster and internal spring-piston mechanism in SolidWorks, then 3D printed and hand-tested the plunger tube, spring, and seal components to refine the fit.</p>
+        </div>
+        <div>
+          <h3>Status</h3>
+          <p class="prose">Air chamber and plunger prototypes are done; slide and trigger are in development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALLERY
+       A simple 2-column grid of supporting photos. Each one is a
+       <figure class="gallery-item"> wrapping an <img> and an
+       optional <figcaption> — the caption shows under the photo
+       in the grid and in the full-size lightbox view (click any
+       photo to open it). Duplicate a <figure> block to add more;
+       delete the <figcaption> line entirely for a photo with no
+       caption.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="nerf-gallery-1.jpg" alt="Assembled 3D-printed air chamber and plunger tube prototype">
+          <figcaption>Assembled air chamber and plunger tube prototype</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="nerf-gallery-2.jpg" alt="Exploded view of the plunger, spring, o-ring seal, and breech parts">
+          <figcaption>Exploded view: plunger, spring, o-ring seal, and breech parts</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="nerf-gallery-3.png" alt="CAD render of the full pistol-style blaster housing, exterior view">
+          <figcaption>CAD render of the full pistol-style housing</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PREV / NEXT PROJECT NAVIGATION
+       EDIT ME — point these at the actual projects before/after
+       this one in your list. Remove a link (leave the <div> and
+       an empty <span>) if this is the first or last project.
+       ========================================================= -->
+  <section class="container">
+    <nav class="project-pager">
+      <a href="project-03.html">
+        <span class="pager-dir">← Previous</span>
+        Punching Strength Tester
+      </a>
+      <a href="projects.html">
+        <span class="pager-dir">All projects</span>
+        Back to projects
+      </a>
+    </nav>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Ryan Heberlig</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDIT ME: page title shown in the browser tab -->
+  <title>Raceway Power Distribution System — Ryan Heberlig</title>
+  <meta name="description" content="One-line description of project one.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+  <!-- =========================================================
+       HOW TO ADD A NEW PROJECT PAGE
+       1. Duplicate this file and rename it, e.g. project-04.html
+       2. Fill in every "EDIT ME" spot below with your content.
+       3. Replace .img-placeholder divs with real <img> tags once
+          you have photos (see the commented example near the hero
+          image below).
+       4. Update the "prev / next" links at the bottom of the page
+          so this project connects to the ones before/after it.
+       5. Add a matching <a class="project-card"> block on the
+          homepage (index.html) so people can find this page.
+       That's it — no build step, no other files to touch.
+       ========================================================= -->
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Ryan Heberlig</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT HEADER + SPEC STRIP
+       The spec strip is the small row that lists role,
+       tools, and year at a glance — edit the values, not the
+       labels, unless you want to change the categories entirely.
+       ========================================================= -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>Raceway Power Distribution System</h1>
+      <p class="lede">
+        A redesigned power distribution system for a low-pressure
+        molding station, replacing failure-prone free-hanging wiring
+        with an organized, protected raceway layout.
+      </p>
+
+      <div class="spec-strip">
+        <span><span class="spec-label">Role:</span> Manufacturing Engineering Co-Op</span>
+        <span><span class="spec-label">Tools:</span> Creo, Manual Machining, Wiring &amp; Assembly</span>
+        <span><span class="spec-label">Date:</span> Spring 2026</span>
+        <span><span class="spec-label">Organization:</span> Amphenol PCD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HERO IMAGE
+       Replace the placeholder div with something like:
+         <img src="project-01-hero.jpg"
+              alt="Describe what's shown in the photo">
+       ========================================================= -->
+  <section class="container">
+    <img src="RacewayFinal.JPG" alt="Raceway Power Distribution System" class="hero-media">
+  </section>
+
+  <!-- =========================================================
+       OVERVIEW
+       Free-form project description. Keep paragraphs short.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Overview</h2>
+      </div>
+      <div class="prose prose--centered">
+        <p>
+          The low-pressure molding station experienced frequent hardware failures and required regular maintenance. Heating cartridges, thermocouples,
+          electrical connections, and coolant lines were prone to damage, while the existing free-hanging wiring made troubleshooting and repairs difficult. 
+          These issues limited the station's reliability and restricted the number of molding cycles that could be completed consecutively.
+        </p>
+        <p>
+          I redesigned the station's power distribution system around a raceway-style layout, replacing the existing free-hanging wiring with an organized 
+          and protected system. The new design improved accessibility to electrical components while reducing the likelihood of damage during operation 
+          and maintenance. I also replaced the pvc coolant system they were using previously with manifolds to decrease coolant leakage.
+        </p>
+         <p>
+          I selected and integrated off-the-shelf components with custom-designed parts to improve the durability and functionality of the station. 
+          This included reaching out to suppliers for custom heating cartridges with stainless-steel braid protection, upgrading to more robust thermocouples, 
+          and replacing incorrectly specced electrical plugs with connectors better matched to the station's voltage requirements. I also coordinated with station
+            operators, making sure that my design decisions made daily operation as easy as possible. Alongside these changes, I 3-D printed custom brackets for
+           the raceway and manifolds, manually machined components and wired and assembled the raceway myself.
+        </p>
+      </div>
+
+      <!-- =====================================================
+           DETAIL COLUMNS
+           Three short columns for challenge / approach / outcome.
+           Delete this block if it doesn't fit your project.
+           ===================================================== -->
+      <div class="detail-columns">
+        <div>
+          <h3>Challenge</h3>
+          <p class="prose">Speccing Parts to Increase Durability.</p>
+        </div>
+        <div>
+          <h3>Outcome</h3>
+          <p class="prose"> -Reduced Maintenance Downtime by 70% </p>
+          <p class="prose"> -Increased maximum molding capacity by 25% </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALLERY
+       A simple 2-column grid of supporting photos. Each one is a
+       <figure class="gallery-item"> wrapping an <img> and an
+       optional <figcaption> — the caption shows under the photo
+       in the grid and in the full-size lightbox view (click any
+       photo to open it). Duplicate a <figure> block to add more;
+       delete the <figcaption> line entirely for a photo with no
+       caption.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="RacewayInitial.JPG" alt="Mold Station Initial">
+          <figcaption>Before: exposed, free-hanging wiring at the mold station</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="RacewayWiring.JPG" alt="Internal Wiring">
+          <figcaption>The new raceway wiring, organized and protected</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PREV / NEXT PROJECT NAVIGATION
+       EDIT ME — point these at the actual projects before/after
+       this one in your list. Remove a link (leave the <div> and
+       an empty <span>) if this is the first or last project.
+       ========================================================= -->
+  <section class="container">
+    <nav class="project-pager">
+      <a href="projects.html">
+        <span class="pager-dir">All projects</span>
+        Back to projects
+      </a>
+      <a href="project-02.html">
+        <span class="pager-dir">Next →</span>
+        Tactility — Refreshable Braille E-Reader
+      </a>
+    </nav>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Ryan Heberlig</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

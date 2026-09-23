@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Ryan Heberlig</title>
+  <meta name="description" content="All projects, summarized.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+  <!-- =========================================================
+       HOW TO KEEP THIS PAGE IN SYNC WITH index.html
+       Every project card on the homepage should have a matching
+       .project-entry block here, pointing at the exact same HTML
+       file. The difference is just format: the homepage
+       shows a picture + skills tags, this page shows a full
+       paragraph so someone can read the whole project without
+       clicking through.
+       To add a project: duplicate one <article class="project-entry">
+       block, update the title/link/skills, and write a paragraph
+       that covers the problem, your approach, and the outcome.
+       ========================================================= -->
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Ryan Heberlig</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p class="lede">
+        A quick summary of each project below — read it here, or
+        click through to a project for photos and full detail.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- =====================================================
+           PROJECT ENTRY 1
+           ===================================================== -->
+      <article class="project-entry">
+        <div class="entry-header">
+          <h2><a href="project-01.html">Raceway Power Distribution System</a></h2>
+          <ul class="skills-tags">
+            <li>Part Selection</li>
+            <li>Manual Machining</li>
+            <li>Wiring &amp; Assembly</li>
+          </ul>
+        </div>
+        <p class="prose">
+          Redesigned the power distribution system for a low-pressure
+          molding station at Amphenol PCD, replacing failure-prone
+          free-hanging wiring with an organized raceway-style layout.
+          I sourced and integrated custom heating cartridges,
+          upgraded thermocouples, and correctly-specced connectors
+          alongside 3D-printed brackets and hand-wired assembly,
+          reducing maintenance downtime by 70% and increasing maximum
+          molding capacity by 25%.
+        </p>
+        <a href="project-01.html" class="text-link">View full project</a>
+      </article>
+
+      <!-- =====================================================
+           PROJECT ENTRY 2
+           ===================================================== -->
+      <article class="project-entry">
+        <div class="entry-header">
+          <h2><a href="project-02.html">Tactility — Braille E-Reader</a></h2>
+          <ul class="skills-tags">
+            <li>Onshape</li>
+            <li>3D Printing</li>
+            <li>Mechanism Design</li>
+            <li>Rapid Prototyping</li>
+          </ul>
+        </div>
+        <p class="prose">
+          Built as part of a six-person hardware team at Forge Product
+          Lab, Tactility is a refreshable Braille e-reader that
+          translates PDF text into physical Braille. I designed the
+          actuation mechanism that raises and lowers each
+          Braille cell's pins, fabricated
+          working prototypes with FDM and SLA 3D printing, and
+          integrated them with N20 motors and drive electronics.
+        </p>
+        <a href="project-02.html" class="text-link">View full project</a>
+      </article>
+
+      <!-- =====================================================
+           PROJECT ENTRY 3
+           ===================================================== -->
+      <article class="project-entry">
+        <div class="entry-header">
+          <h2><a href="project-03.html">Punching Strength Tester</a></h2>
+          <ul class="skills-tags">
+            <li>SolidWorks</li>
+            <li>Arduino / C++</li>
+            <li>Sensor Integration</li>
+          </ul>
+        </div>
+        <p class="prose">
+          Co-developed an electromechanical punching strength tester
+          rated for 450+ N loads as a Cornerstone of Engineering I
+          team project. I designed and laser cut the target, braces,
+          and electronics housing in SolidWorks, then integrated an
+          accelerometer scoring system using C++ and Arduino.
+        </p>
+        <a href="project-03.html" class="text-link">View full project</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CURRENTLY WORKING ON
+       Same .project-entry format as the Projects section above —
+       this is just for work that's still in progress. Once a
+       project here is finished, move its entry up into the
+       Projects section instead of leaving it here.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Currently Working On</h2>
+      </div>
+
+      <!-- =====================================================
+           IN-PROGRESS ENTRY 1
+           ===================================================== -->
+      <article class="project-entry">
+        <div class="entry-header">
+          <h2><a href="project-04.html">DIY Nerf Gun</a></h2>
+          <ul class="skills-tags">
+            <li>SolidWorks</li>
+            <li>3D Printing</li>
+            <li>Mechanism Design</li>
+          </ul>
+        </div>
+        <p class="prose">
+          A fully custom spring-piston pneumatic dart blaster,
+          designed from scratch in SolidWorks. Currently 3D printing
+          and hand-testing the plunger tube, spring, and air-chamber
+          seal to get a reliable fit before printing the full
+          pistol-style housing.
+        </p>
+        <a href="project-04.html" class="text-link">View full project</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Ryan Heberlig</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

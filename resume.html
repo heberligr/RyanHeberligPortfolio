@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résumé — Ryan Heberlig</title>
+  <meta name="description" content="Résumé of Ryan Heberlig, Mechanical Engineering student at Northeastern University.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="resume">
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Ryan Heberlig</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       RÉSUMÉ HEADER
+       Name, title, and contact line, plus a download button for
+       the actual PDF (resume.pdf, sitting in the repo root next
+       to this file — swap that file out any time you update your
+       resume, no need to touch this HTML).
+       ========================================================= -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>Ryan Heberlig</h1>
+      <p class="role-line">Mechanical Engineering Student — Boston, MA</p>
+
+      <ul class="contact-strip">
+        <li><span class="contact-label">Email</span><a href="mailto:heberlig.r@northeastern.edu">heberlig.r@northeastern.edu</a></li>
+        <li><span class="contact-label">Phone</span><a href="tel:+15083099132">(508) 309-9132</a></li>
+        <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">linkedin.com/in/ryanheberlig</a></li>
+      </ul>
+
+      <div class="hero-actions">
+        <!-- resume.pdf lives in the repo root — replace that file
+             whenever the resume is updated and this button keeps
+             working without any other changes. -->
+        <a href="resume.pdf" class="btn btn-on-dark" target="_blank" rel="noopener">Download as PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SUMMARY
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Summary</h2></div>
+      <p class="prose">
+        Third-year Mechanical Engineering student at Northeastern
+        University (3.92 GPA, Dean's List) with hands-on experience
+        across manufacturing engineering, fixture and mechanism
+        design, and rapid prototyping. Comfortable moving from CAD to
+        a finished, working part — designing in Creo and SolidWorks,
+        then fabricating and testing it on the shop floor.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EXPERIENCE
+       Each .resume-entry is one job. To add another, duplicate
+       the whole <article> block and fill in the new details.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Experience</h2></div>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Manufacturing Engineering Co-Op</h3>
+          <span class="resume-dates">Jan 2026 – Jun 2026</span>
+        </div>
+        <p class="resume-org">Amphenol PCD</p>
+        <ul class="resume-bullets">
+          <li>Led integration of laser engraving to replace ink marking, standardizing the process and training operators and engineers, reducing part-marking time by up to 6x across 7 product lines.</li>
+          <li>Designed 18 jigs, fixtures, and manufacturing tools using Creo, integrating with pneumatic and electronic systems as well as handheld tool applications.</li>
+          <li>Developed a raceway-style power distribution system for low-pressure molding, integrating off-the-shelf components with custom-designed parts, reducing maintenance downtime by 70% and increasing maximum molding capacity by 25%.</li>
+          <li>Prototyped a camera calibration attachment, vibratory bowl feeder system, and other fixturing to enable automated part sorting for a 5-axis robotic arm.</li>
+          <li>Repaired industrial machinery used in factory operations, diagnosing equipment failure using root cause analysis.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Hardware Engineer</h3>
+          <span class="resume-dates">Sep 2026 – Present</span>
+        </div>
+        <p class="resume-org">Generate Product Development Studio</p>
+        <ul class="resume-bullets">
+          <li>Sketching and evaluating single-motor dispensing mechanisms for the travel unit of an automated pill dispenser, minimizing footprint while maintaining reliability.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Hardware Team Member</h3>
+          <span class="resume-dates">Feb 2026 – Apr 2026</span>
+        </div>
+        <p class="resume-org">Forge Product Lab</p>
+        <ul class="resume-bullets">
+          <li>Created a braille e-reader alongside a team of 6, able to translate PDF text into Braille.</li>
+          <li>Designed a six-pin actuation mechanism in Onshape for standard refreshable Braille characters.</li>
+          <li>Organized ME system meetings and led design reviews alongside the EE Lead.</li>
+          <li>Fabricated FDM and SLA 3D-printed prototypes integrated with N20 motors and other electronics.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Member</h3>
+          <span class="resume-dates">Sep 2024 – Dec 2025</span>
+        </div>
+        <p class="resume-org">Northeastern Electric Racing</p>
+        <ul class="resume-bullets">
+          <li>Designed the front anti-roll bar for the team's race car, including geometry selection, material choice, stress analysis, and stiffness calculations to optimize handling and cornering performance.</li>
+          <li>Created jigs in SolidWorks for welding suspension mounts to the chassis.</li>
+          <li>Optimized parts using FEA, reducing weight by up to 60% while maintaining the minimum factor of safety.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>Co-Developer, Punching Strength Tester</h3>
+          <span class="resume-dates">Oct 2024 – Dec 2024</span>
+        </div>
+        <p class="resume-org">Cornerstone of Engineering I — Northeastern University</p>
+        <ul class="resume-bullets">
+          <li>Co-developed an electromechanical punching strength tester rated for 450+ N loads.</li>
+          <li>Designed and laser cut the target, braces, and electronics housing using SolidWorks.</li>
+          <li>Integrated an accelerometer, LED lightstrip, LCD screen, and UI using C++ and Arduino.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EDUCATION
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Education</h2></div>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>B.S. in Mechanical Engineering</h3>
+          <span class="resume-dates">Expected 2028</span>
+        </div>
+        <p class="resume-org">Northeastern University — Boston, MA</p>
+        <ul class="resume-bullets">
+          <li>3.92 GPA; Dean's List.</li>
+          <li>Related coursework: Mechanical Computation and Design, Dynamics, Fluids, Thermodynamics.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SKILLS
+       Grouped the same way as elsewhere on the site — duplicate
+       a .skills-group to add a category, or a <li> to add a skill.
+       NOTE: uses the same .skills-tags pill style as the project
+       cards elsewhere on the site (the old template pointed this
+       list at an unstyled ".skills-chips" class — swapped to the
+       real, already-styled class so these actually render as
+       pills instead of a plain bullet list).
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Skills</h2></div>
+
+      <div class="grid grid-3">
+        <div class="skills-group">
+          <h3>Design &amp; analysis</h3>
+          <ul class="skills-tags">
+            <li>Fixture Design</li>
+            <li>GD&amp;T</li>
+            <li>DFM &amp; DFA</li>
+            <li>Rapid Prototyping</li>
+            <li>FEA</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Software</h3>
+          <ul class="skills-tags">
+            <li>Creo</li>
+            <li>SolidWorks</li>
+            <li>Onshape</li>
+            <li>Ansys</li>
+            <li>MATLAB</li>
+            <li>Arduino</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Manufacturing</h3>
+          <ul class="skills-tags">
+            <li>Manual Mill &amp; Lathe</li>
+            <li>Laser Cutting &amp; Engraving</li>
+            <li>SLA &amp; FDM 3D Printing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Certifications, styled as one more skills-group so it
+           matches the layout above without needing new CSS. -->
+      <div class="skills-group mt-lg">
+        <h3>Certifications</h3>
+        <ul class="skills-tags">
+          <li>Lean Six Sigma Green Belt</li>
+          <li>CSWA</li>
+          <li>Tec-Ease GD&amp;T Fundamentals</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ADDITIONAL INTERESTS
+       Same pill-tag pattern as Skills above — duplicate a
+       .skills-group to add another category.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><h2>Additional Interests</h2></div>
+
+      <div class="grid grid-3">
+        <div class="skills-group">
+          <h3>Professional Interests</h3>
+          <ul class="skills-tags">
+            <li>Product Design</li>
+            <li>Manufacturing</li>
+            <li>Rapid Prototyping</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Hobbies</h3>
+          <ul class="skills-tags">
+            <li>Volleyball</li>
+            <li>Reading</li>
+            <li>Drawing</li>
+            <li>Hiking</li>
+            <li>Travel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Ryan Heberlig</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

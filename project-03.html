@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDIT ME: page title shown in the browser tab -->
+  <title>Punching Strength Tester — Ryan Heberlig</title>
+  <meta name="description" content="An electromechanical punching strength tester rated for 450+ lb loads, with a full sensor and UI stack.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+  <!-- =========================================================
+       HOW TO ADD A NEW PROJECT PAGE
+       1. Duplicate this file and rename it, e.g. project-04.html
+       2. Fill in every "EDIT ME" spot below with your content.
+       3. Replace .img-placeholder divs with real <img> tags once
+          you have photos (see the commented example near the hero
+          image below).
+       4. Update the "prev / next" links at the bottom of the page
+          so this project connects to the ones before/after it.
+       5. Add a matching <a class="project-card"> block on the
+          homepage (index.html) so people can find this page.
+       That's it — no build step, no other files to touch.
+       ========================================================= -->
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Ryan Heberlig</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT HEADER + SPEC STRIP
+       The spec strip is the small row that lists role,
+       tools, and year at a glance — edit the values, not the
+       labels, unless you want to change the categories entirely.
+       ========================================================= -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>Punching Strength Tester</h1>
+      <p class="lede">
+        An electromechanical punching bag rig, built to measure and
+        display punch strength in real time using an accelerometer,
+        LED lightstrip, and LCD screen.
+      </p>
+
+      <div class="spec-strip">
+        <span><span class="spec-label">Role:</span> Co-Developer</span>
+        <span><span class="spec-label">Tools:</span> SolidWorks, 3D Printing, C++, Arduino</span>
+        <span><span class="spec-label">Date:</span> Oct–Dec 2024</span>
+        <span><span class="spec-label">Organization:</span> Cornerstone of Engineering I — Team Project</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HERO IMAGE / VIDEO
+       This project's main visual is a demo video rather than a
+       photo — the hero-media class centers either one and keeps
+       it from overwhelming the page (see style.css section 15b).
+       ========================================================= -->
+  <section class="container">
+    <video src="punch-demo.mp4" class="hero-media" controls playsinline
+           poster="punch-thumb.jpg">
+      Your browser doesn't support embedded video —
+      <a href="punch-demo.mp4">download the clip instead</a>.
+    </video>
+  </section>
+
+  <!-- =========================================================
+       OVERVIEW
+       Free-form project description. Keep paragraphs short.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Overview</h2>
+      </div>
+      <div class="prose prose--centered">
+        <p>
+          For our Cornerstone of Engineering I team project, we set
+          out to build an electromechanical punching strength tester
+          rated to withstand loads over 450 N — sturdy enough to
+          take a full-force punch repeatedly without the structure or
+          sensor mount failing.
+        </p>
+        <p>
+          I designed and laser cut the target, mounting braces, and
+          electronics housing in SolidWorks, making sure that parts were 
+          sturdy enough to withstand repeated wear cycles from human punches. On the
+          electronics side, I worked to convert accelerometer data into a scoring system
+          to measure punch force, all driven with C++ on an Arduino.
+        </p>
+        <p>
+          The result is shown above: a user presses the
+          start button, gets prompted to throw a punch, and sees their
+          strength reflected instantly through the lightstrip and LCD
+          readout — turning a raw accelerometer signal into
+          immediate visual and audio feedback.
+        </p>
+      </div>
+
+      <!-- =====================================================
+           DETAIL COLUMNS
+           Three short columns for challenge / approach / outcome.
+           Delete this block if it doesn't fit your project.
+           ===================================================== -->
+      <div class="detail-columns">
+        <div>
+          <h3>Challenge</h3>
+          <p class="prose">Building a target and mounting structure that could survive repeated 450+ N impacts without damaging the sensor or frame.</p>
+        </div>
+        <div>
+          <h3>Approach</h3>
+          <p class="prose">Designed and laser cut the target, braces, and spring mount in SolidWorks, then integrated an accelerometer, LED lightstrip, and LCD UI using C++ and Arduino.</p>
+        </div>
+        <div>
+          <h3>Outcome</h3>
+          <p class="prose">A working, repeatable punching strength tester rated for 450+ N loads with real-time visual feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALLERY
+       A simple 2-column grid of supporting photos. Each one is a
+       <figure class="gallery-item"> wrapping an <img> and an
+       optional <figcaption> — the caption shows under the photo
+       in the grid and in the full-size lightbox view (click any
+       photo to open it). Duplicate a <figure> block to add more;
+       delete the <figcaption> line entirely for a photo with no
+       caption.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="punch-thumb.jpg" alt="Full punching strength tester rig set up on a table, with a punch target, start button, and LCD readout">
+          <figcaption>The full rig: punch target, start button, and LCD readout</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="punch-gallery-1.jpg" alt="Laser-cut enclosure for the start button and LCD display, showing the front panel cutouts">
+          <figcaption>Laser-cut enclosure for the start button and display</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PREV / NEXT PROJECT NAVIGATION
+       EDIT ME — point these at the actual projects before/after
+       this one in your list. Remove a link (leave the <div> and
+       an empty <span>) if this is the first or last project.
+       ========================================================= -->
+  <section class="container">
+    <nav class="project-pager">
+      <a href="project-02.html">
+        <span class="pager-dir">← Previous</span>
+        Tactility — Refreshable Braille E-Reader
+      </a>
+      <a href="project-04.html">
+        <span class="pager-dir">Next →</span>
+        DIY Nerf Gun (in progress)
+      </a>
+    </nav>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Ryan Heberlig</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

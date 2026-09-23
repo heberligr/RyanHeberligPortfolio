@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Heberlig — Engineering Portfolio</title>
+  <meta name="description" content="Engineering portfolio and project archive.">
+
+  <!-- Shared stylesheet: all pages point to the same file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!--
+  data-page="home" is used by main.js to highlight the matching
+  nav link. Keep this in sync with the data-page attribute on the
+  corresponding <a> tag below.
+-->
+<body data-page="home">
+
+  <!-- =========================================================
+       NAV BAR ("hot bar")
+       This exact block is copied at the top of every page. Only
+       two destinations besides Home: Projects and Résumé. If you
+       add another top-level page later, add a link here AND in
+       every other page's nav so they all stay in sync.
+       ========================================================= -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Ryan Heberlig</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       INTRO + CONTACT INFO
+       This is the first thing visitors land on. EDIT ME: swap
+       the headline/tagline for your own, and fill in every field
+       in the contact strip. Leave a field blank (delete the <a>
+       or <span>) if you don't want to list it.
+
+       .hero-flex wraps the text column and the headshot photo side
+       by side (see style.css section 6 for the layout rules). On
+       mobile it stacks into a single column, photo on top — see
+       the responsive rules near the bottom of style.css.
+       ========================================================= -->
+  <section class="hero">
+    <div class="container hero-flex">
+
+      <!-- TEXT COLUMN -->
+      <div class="hero-text">
+        <h1>Ryan Heberlig</h1>
+        <p class="role-line">3rd Year Mechanical Engineering Student</p>
+        <p class="lede">
+          I enjoy tackling complex design problems and finding creative ways to turn ideas into functional products. I’m especially interested in product design, manufacturing
+          mechanical systems, and rapid prototyping, with a focus on designing, building, and testing what I create.
+        </p>
+
+        <!-- CONTACT STRIP: your info, right below the hot bar -->
+        <ul class="contact-strip">
+          <li><span class="contact-label">Email</span><span>heberlig.r@northeastern.edu</span></li>
+          <li><span class="contact-label">Phone</span><a href="tel:+15083099132">(508) 309-9132</a></li>
+          <li><span class="contact-label">Location</span><span>Boston, MA</span></li>
+          <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/ryanheberlig/">https://www.linkedin.com/in/ryanheberlig/</a></li>
+        </ul>
+      </div>
+
+      <!-- HEADSHOT COLUMN — swap headshot.jpg for a new file any
+           time; no other changes needed. -->
+      <div class="hero-photo">
+        <img src="headshot.jpg" alt="Portrait of Ryan Heberlig">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FEATURED PROJECTS
+       Each .project-card is one tile. The whole card is a link —
+       clicking the image, title, or skills goes to the full
+       project page. To add a new project:
+         1. Duplicate one <a class="project-card"> block.
+         2. Point its href at your new project's HTML file.
+         3. Update the title, skills tags, and one-line summary.
+         4. Swap the .img-placeholder div for a real <img> once
+            you have a thumbnail image.
+         5. Add the same project to projects.html too (see that
+            file's comments) so both pages stay in sync.
+       Layout is a CSS grid (.grid-3) — it re-flows to a single
+       column automatically on mobile.
+       ========================================================= -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="grid grid-3">
+
+        <!-- PROJECT CARD 1 -->
+        <a href="project-01.html" class="project-card">
+          <div class="thumb">
+            <img src="RacewayFinal.JPG" alt="Raceway Power Distribution for Low Pressure Molding">
+          </div>
+          <div class="card-body">
+            <h3>Raceway Power Distribution System</h3>
+            <ul class="skills-tags">
+              <li>Part Selection</li>
+              <li>Manual Machining</li>
+              <li>Wiring & Assembly</li>
+            </ul>
+          </div>
+        </a>
+
+        <!-- PROJECT CARD 2 -->
+        <a href="project-02.html" class="project-card">
+          <div class="thumb">
+            <img src="tactility-thumb.jpg" alt="Tactility refreshable Braille e-reader enclosure">
+          </div>
+          <div class="card-body">
+            <h3>Tactility — Braille E-Reader</h3>
+            <ul class="skills-tags">
+              <li>Onshape</li>
+              <li>3D Printing</li>
+              <li>Mechanism Design</li>
+              <li>Rapid Prototyping</li>
+            </ul>
+          </div>
+        </a>
+
+        <!-- PROJECT CARD 3 -->
+        <a href="project-03.html" class="project-card">
+          <div class="thumb">
+            <img src="punch-thumb.jpg" alt="Punching strength tester rig with punch target and LCD readout">
+          </div>
+          <div class="card-body">
+            <h3>Punching Strength Tester</h3>
+            <ul class="skills-tags">
+              <li>SolidWorks</li>
+              <li>Arduino / C++</li>
+              <li>Sensor Integration</li>
+            </ul>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CURRENTLY WORKING ON
+       Same card format as the Projects section above (.grid-3 of
+       .project-card tiles) — this is just for work that's still
+       in progress. Once a project here is finished, move its card
+       up into the Projects section instead of leaving it here.
+       To add another in-progress project, duplicate a
+       <a class="project-card"> block below the same way you would
+       in the Projects section.
+       ========================================================= -->
+  <section class="section" id="in-progress">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Currently Working On</h2>
+      </div>
+
+      <div class="grid grid-3">
+
+        <!-- IN-PROGRESS CARD 1 -->
+        <a href="project-04.html" class="project-card">
+          <div class="thumb">
+            <img src="nerf-thumb.png" alt="Cutaway CAD view of a spring-piston blaster mechanism">
+          </div>
+          <div class="card-body">
+            <h3>DIY Nerf Gun</h3>
+            <ul class="skills-tags">
+              <li>SolidWorks</li>
+              <li>3D Printing</li>
+              <li>Mechanism Design</li>
+            </ul>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TITLE-BLOCK FOOTER
+       Styled after the title block on an engineering drawing
+       sheet. Edit the contact details in the cells below.
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Ryan Heberlig</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

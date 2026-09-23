@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDIT ME: page title shown in the browser tab -->
+  <title>Tactility — Refreshable Braille E-Reader — Ryan Heberlig</title>
+  <meta name="description" content="A refreshable Braille e-reader that translates PDF text into physical Braille characters.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="projects">
+
+  <!-- =========================================================
+       HOW TO ADD A NEW PROJECT PAGE
+       1. Duplicate this file and rename it, e.g. project-04.html
+       2. Fill in every "EDIT ME" spot below with your content.
+       3. Replace .img-placeholder divs with real <img> tags once
+          you have photos (see the commented example near the hero
+          image below).
+       4. Update the "prev / next" links at the bottom of the page
+          so this project connects to the ones before/after it.
+       5. Add a matching <a class="project-card"> block on the
+          homepage (index.html) so people can find this page.
+       That's it — no build step, no other files to touch.
+       ========================================================= -->
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">Ryan Heberlig</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT HEADER + SPEC STRIP
+       The spec strip is the small row that lists role,
+       tools, and year at a glance — edit the values, not the
+       labels, unless you want to change the categories entirely.
+       ========================================================= -->
+  <section class="hero hero--compact">
+    <div class="container">
+      <h1>Tactility — Refreshable Braille E-Reader</h1>
+      <p class="lede">
+        A hardware device that translates PDF text into refreshable
+        Braille, letting a reader feel one line of characters at a
+        time instead of relying on a fixed embossed page.
+      </p>
+
+      <div class="spec-strip">
+        <span><span class="spec-label">Role:</span> Hardware Team Member</span>
+        <span><span class="spec-label">Tools:</span> Onshape, FDM &amp; SLA 3D Printing, Arduino</span>
+        <span><span class="spec-label">Date:</span> Feb–Apr 2026</span>
+        <span><span class="spec-label">Organization:</span> Forge Product Lab</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HERO IMAGE / VIDEO
+       This project's main visual is a demo video rather than a
+       photo — the hero-media class centers either one and keeps
+       it from overwhelming the page (see style.css section 15b).
+       ========================================================= -->
+  <section class="container">
+    <video src="tactility-demo.mp4" class="hero-media" controls playsinline
+           poster="tactility-thumb.jpg">
+      Your browser doesn't support embedded video —
+      <a href="tactility-demo.mp4">download the clip instead</a>.
+    </video>
+  </section>
+
+  <!-- =========================================================
+       OVERVIEW
+       Free-form project description. Keep paragraphs short.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Overview</h2>
+      </div>
+      <div class="prose prose--centered">
+        <p>
+          Standard Braille books and displays are expensive and bulky,
+          and commercial refreshable displays actuate each dot
+          individually — precision electronics too small, and too
+          costly, to fit on a limited budget. Our goal as a six-person
+          hardware team on Forge, a student product-design team, was
+          to design a lower-cost refreshable display that could take
+          a PDF, translate the text to Braille, and physically render
+          it one line at a time.
+        </p>
+        <p>
+          The mechanism I designed shifts the size problem instead of
+          solving it head-on: rather than squeezing individual
+          actuators behind every dot, I moved the size constraint into
+          the gaps between letters, keeping each dot at the true
+          1.5 mm Braille standard. The actuation itself works like a
+          door lock — inserting a key bumps pins to different heights
+          based on the key's geometry. I applied that same idea to a
+          Braille cell, using two N20 DC motor-driven "keys" (one per
+          column) to shift the pins into the correct pattern for any
+          letter, number, or symbol in the Braille alphabet.
+        </p>
+        <p>
+          Beyond the mechanical design, I organized our ME system
+          meetings and led design reviews alongside our EE Chief,
+          keeping the mechanical sub-team coordinated as the device
+          came together.
+        </p>
+      </div>
+
+      <!-- =====================================================
+           DETAIL COLUMNS
+           Three short columns for challenge / approach / outcome.
+           Delete this block if it doesn't fit your project.
+           ===================================================== -->
+      <div class="detail-columns">
+        <div>
+          <h3>Challenge</h3>
+          <p class="prose">Fitting a reliable actuation mechanism within a true 1.5 mm Braille dot pitch, on a one-semester timeline and a $350 budget for the whole project.</p>
+        </div>
+        <div>
+          <h3>Approach</h3>
+          <p class="prose">Designed a lock-and-key style actuation mechanism in Onshape driven by two N20 motors per cell, iterating through FDM and SLA prototypes to hit standard Braille dimensions.</p>
+        </div>
+        <div>
+          <h3>Outcome</h3>
+          <p class="prose">A working, low-cost prototype of a device that normally costs thousands of dollars — translating real PDF text into physical Braille, built and demoed by a six-person team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALLERY
+       A simple 2-column grid of supporting photos. Each one is a
+       <figure class="gallery-item"> wrapping an <img> and an
+       optional <figcaption> — the caption shows under the photo
+       in the grid and in the full-size lightbox view (click any
+       photo to open it). Duplicate a <figure> block to add more;
+       delete the <figcaption> line entirely for a photo with no
+       caption.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="tactility-gallery-v1.png" alt="Cross-section of the initial six-pin actuation concept, manually actuated">
+          <figcaption>v1 — initial proof of concept, manually actuated. Prone to jamming.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="tactility-gallery-v2.png" alt="Cross-section of the refined six-pin actuation mechanism, manually actuated">
+          <figcaption>v2 — refined mechanism, still manually actuated, jamming resolved</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="tactility-gallery-1motor.png" alt="Belt-drive proof of concept for actuating a full cell with one motor instead of two">
+          <figcaption>Belt-drive proof of concept for driving a full cell with one motor instead of two — scrapped as too complex to build at scale</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="tactility-gallery-final.png" alt="Cross-section CAD render of the final six-pin actuation mechanism, showing the rack-and-pinion drive and pin array">
+          <figcaption>Final mechanism — rack-and-pinion drive actuating the six-pin array</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="tactility-gallery-1.jpg" alt="3D-printed six-pin actuation mechanism prototype">
+          <figcaption>3D-printed six-pin actuation mechanism prototype</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="tactility-gallery-2.jpg" alt="Disassembled Braille cell housing showing internal actuation components">
+          <figcaption>Disassembled Braille cell with dummy 3-d printed components to show off internal actuation electronics</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="tactility-gallery-3.jpg" alt="Braille cell electronics wired up on a breadboard with a distance sensor for testing">
+          <figcaption>Braille cell electronics wired up on a breadboard for testing</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PREV / NEXT PROJECT NAVIGATION
+       EDIT ME — point these at the actual projects before/after
+       this one in your list. Remove a link (leave the <div> and
+       an empty <span>) if this is the first or last project.
+       ========================================================= -->
+  <section class="container">
+    <nav class="project-pager">
+      <a href="project-01.html">
+        <span class="pager-dir">← Previous</span>
+        Raceway Power Distribution System
+      </a>
+      <a href="project-03.html">
+        <span class="pager-dir">Next →</span>
+        Punching Strength Tester
+      </a>
+    </nav>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-name">Ryan Heberlig</p>
+          <p class="footer-tagline">Mechanical engineer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
