@@ -450,7 +450,7 @@ a { color: inherit; text-decoration: none; }
 .numbers { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink-soft); }
 .numbers--3 { grid-template-columns: repeat(3, 1fr); }
 .numbers > div { padding: 24px 24px 0 0; }
-.numbers .n { font-size: 2.6rem; font-weight: 800; font-stretch: var(--wide); line-height: 1; }
+.numbers .n { font-size: clamp(1.9rem, 2.6vw, 2.6rem); font-weight: 800; font-stretch: var(--wide); line-height: 1; white-space: nowrap; }
 .numbers .n small { font-size: 1.2rem; }
 .numbers p { color: var(--ink-soft); font-size: 15px; margin-top: 8px; }
 
@@ -682,7 +682,7 @@ a { color: inherit; text-decoration: none; }
 
   .spec, .numbers, .numbers--3 { grid-template-columns: 1fr 1fr; }
   .numbers > div { min-width: 0; padding-right: 16px; }
-  .numbers .n { font-size: 1.9rem; overflow-wrap: anywhere; }
+  .numbers .n { font-size: 1.9rem; white-space: normal; overflow-wrap: anywhere; }
   .spec > div:nth-child(3) { border-left: 0; }
   .spec > div:nth-child(n+3) { border-top: 1px solid var(--line); }
 
