@@ -6,7 +6,7 @@
   <title>Ryan Heberlig — Mechanical Engineer</title>
   <meta name="description" content="Mechanical engineering portfolio of Ryan Heberlig, Northeastern University — product design, manufacturing systems, and rapid prototyping.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body data-page="home">
 
@@ -66,13 +66,14 @@
   <!-- =========================================================
        SELECTED WORK (bento grid)
        Each <a class="tile"> is one project. Size classes:
-       t-big (largest), t-tall, t-wide — see style.css section 9.
-       Add t-cad to a tile whose image is a CAD screenshot.
+       t-big (largest), t-tall, t-wide, t-full — see style.css section 9.
+       Add t-cad to a tile whose image is a CAD screenshot, or use
+       t-type (no image) for a big-number tile.
        Keep projects.html in sync when you add a project.
        ========================================================= -->
   <section class="sec" id="work">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">01</span><h2>Selected work</h2><span class="dim"></span><span class="mono">4 projects</span></div>
+      <div class="sec-head"><span class="mono">01</span><h2>Selected work</h2><span class="dim"></span><span class="mono">5 projects</span></div>
 
       <div class="bento">
         <a href="project-01.html" class="tile t-big">
@@ -84,8 +85,17 @@
             <span class="mono org">Manufacturing Eng. Co-Op · Creo · Machining · Wiring</span>
           </div>
         </a>
-        <a href="project-02.html" class="tile t-tall">
-          <span class="num">02 / FORGE</span>
+        <a href="project-05.html" class="tile t-tall t-type">
+          <span class="num">02 / AMPHENOL PCD</span>
+          <div class="type-art"><span class="type-n">18</span><span class="mono">Machined production<br>fixtures &amp; tools</span></div>
+          <div class="meta">
+            <span class="metric">−89% process time</span>
+            <h3>Production Fixtures &amp; Tooling</h3>
+            <span class="mono org">Creo · ASME Y14.5 · Pneumatics</span>
+          </div>
+        </a>
+        <a href="project-02.html" class="tile t-wide">
+          <span class="num">03 / FORGE</span>
           <img src="tactility-thumb.jpg" alt="Assembled Tactility Braille e-reader held in hand" style="object-position: center 88%">
           <div class="meta">
             <span class="metric">6-pin Braille actuator</span>
@@ -94,7 +104,7 @@
           </div>
         </a>
         <a href="project-03.html" class="tile t-wide">
-          <span class="num">03 / CORNERSTONE</span>
+          <span class="num">04 / CORNERSTONE</span>
           <img src="punch-thumb.jpg" alt="Punching strength tester rig with punch target and LCD readout" style="object-position: center 60%">
           <div class="meta">
             <span class="metric">450+ N rated</span>
@@ -102,8 +112,8 @@
             <span class="mono org">SolidWorks · Arduino / C++</span>
           </div>
         </a>
-        <a href="project-04.html" class="tile t-wide t-cad">
-          <span class="num">04 / PERSONAL</span>
+        <a href="project-04.html" class="tile t-full t-cad">
+          <span class="num">05 / PERSONAL</span>
           <img src="nerf-thumb.png" alt="Cutaway CAD view of a spring-piston blaster mechanism">
           <div class="meta">
             <span class="metric metric--wip">● In progress</span>
