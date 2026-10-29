@@ -22,7 +22,7 @@
      15b. PROJECT PAGE MAIN VISUAL (.hero-media)
      15c. GALLERY LIGHTBOX
      16. PROJECTS LIST PAGE
-     17. RÉSUMÉ ENTRIES
+     17. RÉSUMÉ PDF VIEWER
      18. RESPONSIVE (mobile) RULES
    ============================================================= */
 
@@ -781,49 +781,27 @@ video.hero-media {
 
 
 /* -------------------------------------------------------------
-   17. RÉSUMÉ ENTRIES
+   17. RÉSUMÉ PDF VIEWER
+   The embedded PDF is sized like a letter page (8.5 x 11). On
+   phones the whole viewer section is hidden (section 18).
    ------------------------------------------------------------- */
-.resume-entry {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 0 var(--space-5);
-  padding: var(--space-4) 0;
-  border-top: 1px solid var(--color-border);
+.resume-viewer {
+  max-width: 880px;
+  margin: 0 auto;
+  aspect-ratio: 8.5 / 11;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(29, 31, 36, 0.12);
+  overflow: hidden;
 }
-.resume-entry:first-of-type { border-top: 0; padding-top: 0; }
-
-.resume-entry-header { display: contents; }
-
-.resume-entry-header h3 {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: 1.3rem;
-}
-
-.resume-dates {
-  grid-column: 1;
-  grid-row: 1 / span 3;
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--color-ink-soft);
-  padding-top: 4px;
+.resume-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-.resume-org {
-  grid-column: 2;
-  color: var(--color-accent);
-  font-weight: 600;
-  margin: 4px 0 var(--space-2);
-}
-
-.resume-bullets {
-  grid-column: 2;
-  margin: 0;
-  padding-left: 1.1em;
-  color: var(--color-ink-soft);
-}
-.resume-bullets li { margin-bottom: 6px; padding-left: 4px; }
-.resume-bullets li::marker { color: var(--color-accent); }
 
 
 /* -------------------------------------------------------------
@@ -874,8 +852,5 @@ video.hero-media {
   .project-pager { grid-template-columns: 1fr; }
   .project-pager a:last-child { text-align: left; }
 
-  .resume-entry { grid-template-columns: 1fr; }
-  .resume-entry-header h3, .resume-org, .resume-bullets { grid-column: 1; }
-  .resume-entry-header h3 { grid-row: auto; }
-  .resume-dates { grid-column: 1; grid-row: auto; order: -1; padding: 0 0 4px; }
+  .resume-viewer-section { display: none; }
 }
