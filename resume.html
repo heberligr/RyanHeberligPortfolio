@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Résumé — Ryan Heberlig</title>
   <meta name="description" content="Résumé of Ryan Heberlig, Mechanical Engineering student at Northeastern University.">
-  <link rel="stylesheet" href="style.css?v=2">
+  <meta name="theme-color" content="#0F1114">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body data-page="resume">
 
   <!-- NAV BAR (identical on every page) -->
   <header class="site-nav">
-    <div class="container">
-      <a href="index.html" class="brand">Ryan Heberlig</a>
+    <div class="wrap">
+      <a href="index.html" class="brand">Ryan Heberlig<span>.</span></a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="index.html" data-page="home">Work</a></li>
           <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
           <li><a href="resume.html" data-page="resume" class="nav-cta">Résumé</a></li>
         </ul>
       </nav>
@@ -26,50 +28,39 @@
 
   <!-- =========================================================
        RÉSUMÉ HEADER
-       Download / open buttons for the actual PDF (resume.pdf,
-       sitting in the repo root next to this file — swap that file
-       out any time you update your resume, no need to touch this
-       HTML).
+       Buttons point at resume.pdf in the repo root — replace that
+       file whenever you update your résumé; no HTML changes needed.
        ========================================================= -->
-  <section class="hero hero--compact">
-    <div class="container">
+  <section class="p-hero grid-paper">
+    <div class="wrap">
+      <p class="mono crumbs"><a href="index.html">← Work</a> &nbsp;/&nbsp; Résumé</p>
       <h1>Résumé</h1>
-      <div class="hero-actions">
+      <div class="actions">
         <a href="resume.pdf" class="btn btn-primary" download="Ryan-Heberlig-Resume.pdf">Download PDF</a>
-        <a href="resume.pdf" class="btn btn-on-dark" target="_blank" rel="noopener">Open in new tab</a>
+        <a href="resume.pdf" class="btn btn-line" target="_blank" rel="noopener">Open in new tab</a>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================
-       PDF VIEWER
-       Embeds resume.pdf directly. Phone browsers can't display a
-       PDF inside a page, so on small screens this whole section is
-       hidden and the header buttons above do the job instead
-       (style.css section 18).
-       ========================================================= -->
-  <section class="section section--alt resume-viewer-section">
-    <div class="container">
+  <!-- PDF VIEWER: hidden on phones, which can't show a PDF inside a page -->
+  <section class="sec resume-viewer-section">
+    <div class="wrap">
       <div class="resume-viewer">
         <iframe src="resume.pdf#view=FitH&amp;navpanes=0" title="Ryan Heberlig résumé (PDF)"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- TITLE-BLOCK FOOTER -->
+  <!-- TITLE-BLOCK FOOTER (styled like an engineering drawing's title block) -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <p class="footer-name">Ryan Heberlig</p>
-          <p class="footer-tagline">Mechanical engineer</p>
-        </div>
-        <ul class="footer-links">
-          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
-          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
+    <div class="wrap">
+      <div class="tb">
+        <div><span class="mono">Drawn by</span><span class="name">Ryan Heberlig</span></div>
+        <div><span class="mono">Email</span><a class="v" href="mailto:heberlig.r@northeastern.edu">heberlig.r@northeastern.edu</a></div>
+        <div><span class="mono">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">/in/ryanheberlig</a></div>
+        <div><span class="mono">Sheet</span><span class="v">Résumé · Rev 2026</span></div>
       </div>
-      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+      <p class="mono fine">&copy; 2026 Ryan Heberlig · Boston, MA</p>
     </div>
   </footer>
 
