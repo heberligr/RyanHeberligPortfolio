@@ -784,9 +784,12 @@ video.hero-media {
    17. RÉSUMÉ PDF VIEWER
    The embedded PDF is sized like a letter page (8.5 x 11). On
    phones the whole viewer section is hidden (section 18).
+   NOTE: every page links style.css?v=N — bump N after editing
+   this file so browsers don't keep using a cached old copy.
    ------------------------------------------------------------- */
 .resume-viewer {
-  max-width: 880px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   aspect-ratio: 8.5 / 11;
   background: var(--color-bg);
