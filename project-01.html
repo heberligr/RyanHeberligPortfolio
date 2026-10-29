@@ -6,7 +6,7 @@
   <title>Raceway Power Distribution System — Ryan Heberlig</title>
   <meta name="description" content="A redesigned raceway-style power distribution system for a low-pressure molding station at Amphenol PCD, eliminating downtime and raising molding capacity by 25%.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -51,8 +51,8 @@
        ========================================================= -->
   <section class="sec">
     <div class="wrap">
-      <div class="numbers numbers--3"><div><div class="n">+25%</div><p>Concurrent molding capacity</p></div><div><div class="n">Quick-swap</div><p>Failures isolated to replaceable parts</p></div><div><div class="n">Manifolds</div><p>Replaced leak-prone PVC coolant lines</p></div></div>
-      <div class="par"><div><span class="mono">Problem</span><h3>Failure-prone station</h3><p>Heating cartridges, thermocouples, connections, and coolant lines were easily damaged, and free-hanging wiring made troubleshooting slow.</p></div><div><span class="mono">Approach</span><h3>Spec for durability</h3><p>Raceway layout, braid-protected custom heating cartridges, robust thermocouples, correctly-specced connectors, and coolant manifolds.</p></div><div><span class="mono">Result</span><h3>Downtime eliminated</h3><p>Failures isolated to quick-swap parts, eliminating downtime and raising concurrent molding capacity by 25%.</p></div></div>
+      <div class="numbers numbers--3"><div><div class="n">+25%</div><p>Concurrent molding capacity</p></div><div><div class="n">16 : 8</div><p>Molds to stations — station uptime limits output</p></div><div><div class="n">Quick-swap</div><p>Nearly all failures moved to swappable thermocouples</p></div></div>
+      <div class="par"><div><span class="mono">Problem</span><h3>Failures that stopped stations</h3><p>Failures were split between heating cartridges and thermocouples, and station-side wiring was hard to reach. With 16 molds for 8 stations, a bad mold could be benched — a bad station killed concurrent run time.</p></div><div><span class="mono">Approach</span><h3>Protect the station, standardize parts</h3><p>Raceway with elevated wiring, standardized braid-protected heating cartridges ready to swap in immediately, larger thermocouples, and coolant manifolds.</p></div><div><span class="mono">Result</span><h3>Downtime eliminated</h3><p>Station-side failures designed out and nearly all failures shifted to quick-swap thermocouples, raising concurrent molding capacity by 25%.</p></div></div>
     </div>
   </section>
 
@@ -60,10 +60,12 @@
   <section class="sec sec--tight">
     <div class="wrap">
       <div class="sec-head"><span class="mono">01</span><h2>Overview</h2><span class="dim"></span></div>
-      <div class="prose">
-        <p>The low-pressure molding station experienced frequent hardware failures and required regular maintenance. Heating cartridges, thermocouples, electrical connections, and coolant lines were prone to damage, while the existing free-hanging wiring made troubleshooting and repairs difficult. These issues limited the station's reliability and restricted the number of molding cycles that could be completed consecutively.</p>
-        <p>I redesigned the station's power distribution system around a raceway-style layout, replacing the existing free-hanging wiring with an organized and protected system. The new design improved accessibility to electrical components while reducing the likelihood of damage during operation and maintenance. I also replaced the PVC coolant system they were using previously with manifolds to decrease coolant leakage.</p>
-        <p>I selected and integrated off-the-shelf components with custom-designed parts to improve the durability and functionality of the station. This included reaching out to suppliers for custom heating cartridges with stainless-steel braid protection, upgrading to more robust thermocouples, and replacing incorrectly specced electrical plugs with connectors better matched to the station's voltage requirements. I also coordinated with station operators, making sure that my design decisions made daily operation as easy as possible. Alongside these changes, I 3D printed custom brackets for the raceway and manifolds, manually machined components, and wired and assembled the raceway myself.</p>
+      <div class="prose prose--center">
+        <p>The low-pressure molding line ran 16 molds across 8 stations, and it experienced frequent hardware failures. Those failures were split between the heating cartridges and the thermocouples. The heating cartridges had to be modified before they could be used and tended to stay stuck in the molds, so every cartridge failure meant downtime until the old cartridge could be removed and a new one prepped and inserted.</p>
+        <p>Station-side failures were an even bigger problem. The free-hanging wiring was very hard to access and replace, so a station-side issue caused even more downtime. And because there were twice as many molds as stations, a failed mold could simply be left out of the run — but a failed station cut into concurrent run time.</p>
+        <p>I redesigned the station's power distribution system around a raceway-style layout, replacing the free-hanging wiring with an organized and protected system. The raceway protects the station-side wiring and elevates it away from the heated molds to prevent heat damage and fraying, while making electrical components easier to reach during maintenance. I also replaced the PVC coolant system they were using previously with manifolds to decrease coolant leakage.</p>
+        <p>I selected and integrated off-the-shelf components with custom-designed parts to improve the durability and functionality of the station. I worked with suppliers to standardize the heating cartridges — custom cartridges with stainless-steel braid protection that need no modification, so a failed one can be replaced immediately. I also upgraded to larger, more robust thermocouples that are less prone to damage than the originals, and replaced incorrectly specced electrical plugs with connectors better matched to the station's voltage requirements. I coordinated with station operators to make sure my design decisions made daily operation as easy as possible, and I 3D printed custom brackets for the raceway and manifolds, manually machined components, and wired and assembled the raceway myself.</p>
+        <p>The result shifted almost all failures onto the thermocouples, which can be quick-swapped. With station-side failures designed out and cartridges ready to drop in, downtime was eliminated and concurrent molding capacity rose by 25%.</p>
       </div>
     </div>
   </section>

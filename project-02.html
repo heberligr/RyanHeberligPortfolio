@@ -6,7 +6,7 @@
   <title>Tactility — Refreshable Braille E-Reader — Ryan Heberlig</title>
   <meta name="description" content="A refreshable Braille e-reader that translates PDF text into physical Braille characters.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -62,7 +62,7 @@
   <section class="sec sec--tight">
     <div class="wrap">
       <div class="sec-head"><span class="mono">01</span><h2>Overview</h2><span class="dim"></span></div>
-      <div class="prose">
+      <div class="prose prose--center">
         <p>Standard Braille books and displays are expensive and bulky, and commercial refreshable displays actuate each dot individually — precision electronics too small, and too costly, to fit on a limited budget. Our goal as a six-person hardware team on Forge, a student product-design team, was to design a lower-cost refreshable display that could take a PDF, translate the text to Braille, and physically render it one line at a time.</p>
         <p>The mechanism I designed shifts the size problem instead of solving it head-on: rather than squeezing individual actuators behind every dot, I moved the size constraint into the gaps between letters, keeping each dot at the true 1.5 mm Braille standard. The actuation itself works like a door lock — inserting a key bumps pins to different heights based on the key's geometry. I applied that same idea to a Braille cell, using two N20 DC motor-driven “keys” (one per column) to shift the pins into the correct pattern for any letter, number, or symbol in the Braille alphabet.</p>
         <p>Beyond the mechanical design, I organized our ME system meetings and led design reviews alongside our EE Chief, keeping the mechanical sub-team coordinated as the device came together.</p>
