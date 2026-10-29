@@ -3,37 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ryan Heberlig — Engineering Portfolio</title>
-  <meta name="description" content="Engineering portfolio and project archive.">
-
-  <!-- Shared stylesheet: all pages point to the same file -->
-  <link rel="stylesheet" href="style.css?v=2">
+  <title>Ryan Heberlig — Mechanical Engineer</title>
+  <meta name="description" content="Mechanical engineering portfolio of Ryan Heberlig, Northeastern University — product design, manufacturing systems, and rapid prototyping.">
+  <meta name="theme-color" content="#0F1114">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
-
-<!--
-  data-page="home" is used by main.js to highlight the matching
-  nav link. Keep this in sync with the data-page attribute on the
-  corresponding <a> tag below.
--->
 <body data-page="home">
 
-  <!-- =========================================================
-       NAV BAR ("hot bar")
-       This exact block is copied at the top of every page. Only
-       two destinations besides Home: Projects and Résumé. If you
-       add another top-level page later, add a link here AND in
-       every other page's nav so they all stay in sync.
-       ========================================================= -->
+  <!-- NAV BAR (identical on every page) -->
   <header class="site-nav">
-    <div class="container">
-      <a href="index.html" class="brand">Ryan Heberlig</a>
-
+    <div class="wrap">
+      <a href="index.html" class="brand">Ryan Heberlig<span>.</span></a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
-
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="index.html" data-page="home">Work</a></li>
           <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
           <li><a href="resume.html" data-page="resume" class="nav-cta">Résumé</a></li>
         </ul>
       </nav>
@@ -41,149 +27,119 @@
   </header>
 
   <!-- =========================================================
-       INTRO (dark hero)
-       Text on the left, headshot on the right. On mobile the photo
-       moves above the text (see style.css section 18).
+       INTRO
+       Headline on the left, headshot on the right. Edit the
+       "avail" pill text to say when you're looking for co-op.
        ========================================================= -->
   <section class="hero">
-    <div class="container hero-flex">
-
-      <div class="hero-text">
-        <h1>Ryan Heberlig</h1>
-        <p class="role-line">3rd Year Mechanical Engineering Student</p>
-        <p class="lede">
-          I enjoy tackling complex design problems and finding creative ways to turn ideas into functional products. I’m especially interested in product design, manufacturing
-          mechanical systems, and rapid prototyping, with a focus on designing, building, and testing what I create.
+    <div class="wrap">
+      <div>
+        <span class="avail">Open to co-op opportunities</span>
+        <h1>Designing, building &amp; testing mechanical systems.</h1>
+        <p class="sub">
+          <b>3rd-year Mechanical Engineering student at Northeastern.</b> Product design,
+          manufacturing systems, and rapid prototyping — from CAD to a working part on the shop floor.
         </p>
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">See projects</a>
-          <a href="resume.pdf" class="btn btn-on-dark" target="_blank" rel="noopener">Download résumé</a>
+        <div class="actions">
+          <a href="#work" class="btn btn-primary">View selected work</a>
+          <a href="resume.pdf" class="btn btn-line" target="_blank" rel="noopener">Download résumé</a>
         </div>
       </div>
-
-      <!-- swap headshot.jpg for a new file any time -->
-      <div class="hero-photo">
+      <div class="view">
         <img src="headshot.jpg" alt="Portrait of Ryan Heberlig">
+        <span class="mono tag">View A — R. Heberlig · Boston, MA</span>
       </div>
-
     </div>
   </section>
 
-  <!-- CONTACT BAR: light gray band right under the hero -->
-  <div class="contact-bar">
-    <div class="container">
-      <ul class="contact-strip">
-        <li><span class="contact-label">Email</span><a href="mailto:heberlig.r@northeastern.edu">heberlig.r@northeastern.edu</a></li>
-        <li><span class="contact-label">Phone</span><a href="tel:+15083099132">(508) 309-9132</a></li>
-        <li><span class="contact-label">Location</span><span>Boston, MA</span></li>
-        <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">linkedin.com/in/ryanheberlig</a></li>
-      </ul>
+  <!-- STATS STRIP: four headline numbers. Wrap a number in <em> to make it red. -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat"><div class="n">3.92</div><span class="mono">GPA · Dean's List</span></div>
+      <div class="stat"><div class="n">18</div><span class="mono">Co-op projects completed</span></div>
+      <div class="stat"><div class="n"><em>−89%</em></div><span class="mono">Fixture process time</span></div>
+      <div class="stat"><div class="n">CSWA</div><span class="mono">+ Lean Six Sigma Green Belt</span></div>
     </div>
-  </div>
+  </section>
 
   <!-- =========================================================
-       PROJECTS
-       Each <article class="case"> is one row: image + title,
-       short summary, details, and a link. Rows alternate sides
-       automatically. To add a project, duplicate one <article>
-       block, then update the links, image, text, and details.
-       Add it to projects.html too so both pages stay in sync.
+       SELECTED WORK (bento grid)
+       Each <a class="tile"> is one project. Size classes:
+       t-big (largest), t-tall, t-wide — see style.css section 9.
+       Add t-cad to a tile whose image is a CAD screenshot.
+       Keep projects.html in sync when you add a project.
        ========================================================= -->
-  <section class="section" id="work">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Projects</h2>
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">01</span><h2>Selected work</h2><span class="dim"></span><span class="mono">4 projects</span></div>
+
+      <div class="bento">
+        <a href="project-01.html" class="tile t-big">
+          <span class="num">01 / AMPHENOL PCD</span>
+          <img src="RacewayFinal.JPG" alt="Raceway power distribution system installed on a low-pressure molding station">
+          <div class="meta">
+            <span class="metric">+25% molding capacity</span>
+            <h3>Raceway Power Distribution System</h3>
+            <span class="mono org">Manufacturing Eng. Co-Op · Creo · Machining · Wiring</span>
+          </div>
+        </a>
+        <a href="project-02.html" class="tile t-tall">
+          <span class="num">02 / FORGE</span>
+          <img src="tactility-gallery-2.jpg" alt="Tactility Braille e-reader enclosure and actuation electronics">
+          <div class="meta">
+            <span class="metric">6-pin Braille actuator</span>
+            <h3>Tactility Braille E-Reader</h3>
+            <span class="mono org">Onshape · SLA/FDM</span>
+          </div>
+        </a>
+        <a href="project-03.html" class="tile t-wide">
+          <span class="num">03 / CORNERSTONE</span>
+          <img src="punch-thumb.jpg" alt="Punching strength tester rig with punch target and LCD readout" style="object-position: center 60%">
+          <div class="meta">
+            <span class="metric">450+ N rated</span>
+            <h3>Punching Strength Tester</h3>
+            <span class="mono org">SolidWorks · Arduino / C++</span>
+          </div>
+        </a>
+        <a href="project-04.html" class="tile t-wide t-cad">
+          <span class="num">04 / PERSONAL</span>
+          <img src="nerf-thumb.png" alt="Cutaway CAD view of a spring-piston blaster mechanism">
+          <div class="meta">
+            <span class="metric metric--wip">● In progress</span>
+            <h3>DIY Nerf Gun</h3>
+            <span class="mono org">SolidWorks · Mechanism design</span>
+          </div>
+        </a>
       </div>
-
-      <article class="case">
-        <a href="project-01.html" class="case-img"><img src="RacewayFinal.JPG" alt="Raceway Power Distribution for Low Pressure Molding"></a>
-        <div>
-          <h3><a href="project-01.html">Raceway Power Distribution System</a></h3>
-          <p class="case-summary">Redesigned the power distribution system for a low-pressure molding station at Amphenol PCD, replacing failure-prone free-hanging wiring with an organized raceway-style layout.</p>
-          <dl class="case-details">
-            <dt>Role</dt><dd>Manufacturing Engineering Co-Op</dd>
-            <dt>Organization</dt><dd>Amphenol PCD</dd>
-            <dt>Skills</dt><dd>Creo, Part Selection, Manual Machining, Wiring &amp; Assembly</dd>
-          </dl>
-          <a href="project-01.html" class="text-link">View project</a>
-        </div>
-      </article>
-
-      <article class="case">
-        <a href="project-02.html" class="case-img"><img src="tactility-thumb.jpg" alt="Tactility refreshable Braille e-reader enclosure"></a>
-        <div>
-          <h3><a href="project-02.html">Tactility — Braille E-Reader</a></h3>
-          <p class="case-summary">Built as part of a six-person hardware team at Forge Product Lab, Tactility is a refreshable Braille e-reader that translates PDF text into physical Braille.</p>
-          <dl class="case-details">
-            <dt>Role</dt><dd>Hardware Team Member</dd>
-            <dt>Organization</dt><dd>Forge Product Lab</dd>
-            <dt>Skills</dt><dd>Onshape, 3D Printing, Mechanism Design, Rapid Prototyping</dd>
-          </dl>
-          <a href="project-02.html" class="text-link">View project</a>
-        </div>
-      </article>
-
-      <article class="case">
-        <a href="project-03.html" class="case-img"><img src="punch-thumb.jpg" alt="Punching strength tester rig with punch target and LCD readout"></a>
-        <div>
-          <h3><a href="project-03.html">Punching Strength Tester</a></h3>
-          <p class="case-summary">Co-developed an electromechanical punching strength tester rated for 450+ N loads as a Cornerstone of Engineering I team project.</p>
-          <dl class="case-details">
-            <dt>Role</dt><dd>Co-Developer</dd>
-            <dt>Organization</dt><dd>Cornerstone of Engineering I</dd>
-            <dt>Skills</dt><dd>SolidWorks, Arduino / C++, Sensor Integration</dd>
-          </dl>
-          <a href="project-03.html" class="text-link">View project</a>
-        </div>
-      </article>
-
     </div>
   </section>
 
   <!-- =========================================================
-       CURRENTLY WORKING ON (gray band)
-       Same .case format as above. When a project here is done,
-       move its <article> up into the Projects section and delete
-       the "status-tag" line.
+       EXPERIENCE
+       One .xp-row per role: dates / organization / what you did / location.
        ========================================================= -->
-  <section class="section section--alt" id="in-progress">
-    <div class="container">
-
-      <article class="case">
-        <a href="project-04.html" class="case-img"><img src="nerf-thumb.png" alt="Cutaway CAD view of a spring-piston blaster mechanism"></a>
-        <div>
-          <span class="status-tag">Currently working on</span>
-          <h3><a href="project-04.html">DIY Nerf Gun</a></h3>
-          <p class="case-summary">A fully custom spring-piston pneumatic dart blaster, designed from scratch in SolidWorks.</p>
-          <dl class="case-details">
-            <dt>Role</dt><dd>Solo Project</dd>
-            <dt>Skills</dt><dd>SolidWorks, 3D Printing, Mechanism Design</dd>
-          </dl>
-          <a href="project-04.html" class="text-link">View project</a>
-        </div>
-      </article>
-
+  <section class="sec sec--tight" id="experience">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">02</span><h2>Experience</h2><span class="dim"></span></div>
+      <div class="xp">
+        <div class="xp-row"><span class="mono">Sep 2026 – Now</span><h3>Generate Product Development Studio</h3><p>Hardware Engineer — single-motor rotary indexing mechanism for an automated pill dispenser</p><span class="mono r">Boston, MA</span></div>
+        <div class="xp-row"><span class="mono">Jan – Jun 2026</span><h3>Amphenol PCD</h3><p>Manufacturing Engineering Co-Op — 18 projects incl. fixtures and a laser-marking rollout across 7 product lines</p><span class="mono r">Beverly, MA</span></div>
+        <div class="xp-row"><span class="mono">Feb – Apr 2026</span><h3>Forge Product Lab</h3><p>Hardware Team Member — six-pin Braille cell actuation mechanism</p><span class="mono r">Boston, MA</span></div>
+        <div class="xp-row"><span class="mono">Sep 2024 – Dec 2025</span><h3>Northeastern Electric Racing</h3><p>Front anti-roll bar, welding jigs, FEA weight reduction up to 60%</p><span class="mono r">Boston, MA</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- =========================================================
-       TITLE-BLOCK FOOTER
-       Styled after the title block on an engineering drawing
-       sheet. Edit the contact details in the cells below.
-       ========================================================= -->
+  <!-- TITLE-BLOCK FOOTER (styled like an engineering drawing's title block) -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <p class="footer-name">Ryan Heberlig</p>
-          <p class="footer-tagline">Mechanical engineer</p>
-        </div>
-        <ul class="footer-links">
-          <li><a href="mailto:heberlig.r@northeastern.edu">Email</a></li>
-          <li><a href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
+    <div class="wrap">
+      <div class="tb">
+        <div><span class="mono">Drawn by</span><span class="name">Ryan Heberlig</span></div>
+        <div><span class="mono">Email</span><a class="v" href="mailto:heberlig.r@northeastern.edu">heberlig.r@northeastern.edu</a></div>
+        <div><span class="mono">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">/in/ryanheberlig</a></div>
+        <div><span class="mono">Sheet</span><span class="v">Home · Rev 2026</span></div>
       </div>
-      <p class="footer-bottom">&copy; 2026 Ryan Heberlig.</p>
+      <p class="mono fine">&copy; 2026 Ryan Heberlig · Boston, MA</p>
     </div>
   </footer>
 
