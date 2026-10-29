@@ -386,6 +386,7 @@ a { color: inherit; text-decoration: none; }
 .xp-row h3 { font-size: 1.1rem; font-weight: 700; }
 .xp-row p { color: var(--ink-soft); font-size: 15px; }
 .xp-row .r { text-align: right; }
+.xp-row--incoming > .mono:first-child { color: var(--good); }
 
 
 /* -------------------------------------------------------------
