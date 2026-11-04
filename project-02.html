@@ -6,7 +6,7 @@
   <title>Tactility — Refreshable Braille E-Reader — Ryan Heberlig</title>
   <meta name="description" content="A refreshable Braille e-reader that translates PDF text into physical Braille characters.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -33,7 +33,7 @@
     <div class="wrap">
       <p class="mono crumbs"><a href="projects.html">← Projects</a> &nbsp;/&nbsp; Project 03</p>
       <h1>Tactility — Refreshable Braille E-Reader</h1>
-      <p class="sub">A low-cost device that translates PDF text into refreshable Braille, letting a reader feel one line at a time instead of relying on a fixed embossed page.</p>
+      <p class="sub">A low-cost device that turns PDF text into refreshable Braille, one line at a time.</p>
       <div class="spec"><div><span class="mono">Role</span><div class="v">Hardware Team Member</div></div><div><span class="mono">Team</span><div class="v">Forge Product Lab · 6 people</div></div><div><span class="mono">Tools</span><div class="v">Onshape · FDM &amp; SLA · Arduino</div></div><div><span class="mono">Date</span><div class="v">Feb – Apr 2026</div></div></div>
     </div>
   </section>
@@ -52,20 +52,21 @@
        ========================================================= -->
   <section class="sec">
     <div class="wrap">
-      <div class="numbers"><div><div class="n">1.5<small> mm</small></div><p>Standard Braille dot size, held exactly</p></div><div><div class="n">6</div><p>Pins per cell, independently driven</p></div><div><div class="n">2</div><p>N20 motors per cell</p></div><div><div class="n">$350</div><p>Budget for the whole device</p></div></div>
-      <div class="par"><div><span class="mono">Problem</span><h3>Too small, too expensive</h3><p>Commercial refreshable displays actuate each dot individually — precision electronics too small and too costly for a one-semester, $350 build.</p></div><div><span class="mono">Approach</span><h3>A lock-and-key mechanism</h3><p>Moved the size constraint into the gaps between letters. Motor-driven “keys” bump pins to different heights, like a door lock, to form any Braille character.</p></div><div><span class="mono">Result</span><h3>A working prototype</h3><p>Translates real PDF text into physical Braille — a device that normally costs thousands, built and demoed by a six-person team.</p></div></div>
+      <div class="numbers"><div><div class="n">1.5<small> mm</small></div><p>Standard Braille dot size, held exactly</p></div><div><div class="n">6</div><p>Pins per cell</p></div><div><div class="n">2</div><p>N20 motors per cell</p></div><div><div class="n">$350</div><p>Total budget</p></div></div>
+      <div class="par"><div><span class="mono">Problem</span><h3>Too small, too expensive</h3><ul><li>Commercial displays drive every dot separately</li><li>Those actuators are too tiny and costly for $350</li></ul></div><div><span class="mono">Approach</span><h3>A lock-and-key mechanism</h3><ul><li>Size constraint moved to the gaps between letters</li><li>Motor-driven “keys” set pin heights, like a door lock</li></ul></div><div><span class="mono">Result</span><h3>A working prototype</h3><ul><li>Real PDF text rendered as physical Braille</li><li>Built and demoed by a 6-person team</li></ul></div></div>
     </div>
   </section>
 
-  <!-- OVERVIEW: free-form write-up. Keep paragraphs short. -->
+  <!-- KEY POINTS: one bold label + one short line each. -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">01</span><h2>Overview</h2><span class="dim"></span></div>
-      <div class="prose prose--center">
-        <p>Standard Braille books and displays are expensive and bulky, and commercial refreshable displays actuate each dot individually — precision electronics too small, and too costly, to fit on a limited budget. Our goal as a six-person hardware team on Forge, a student product-design team, was to design a lower-cost refreshable display that could take a PDF, translate the text to Braille, and physically render it one line at a time.</p>
-        <p>The mechanism I designed shifts the size problem instead of solving it head-on: rather than squeezing individual actuators behind every dot, I moved the size constraint into the gaps between letters, keeping each dot at the true 1.5 mm Braille standard. The actuation itself works like a door lock — inserting a key bumps pins to different heights based on the key's geometry. I applied that same idea to a Braille cell, using two N20 DC motor-driven “keys” (one per column) to shift the pins into the correct pattern for any letter, number, or symbol in the Braille alphabet.</p>
-        <p>Beyond the mechanical design, I organized our ME system meetings and led design reviews alongside our EE Chief, keeping the mechanical sub-team coordinated as the device came together.</p>
-      </div>
+      <div class="sec-head"><span class="mono">01</span><h2>What I did</h2><span class="dim"></span></div>
+      <ul class="points">
+        <li><b>Mechanism design</b>Designed the lock-and-key Braille cell, keeping every dot at the true 1.5 mm standard.</li>
+        <li><b>Actuation</b>Two N20 DC-motor “keys” per cell, one per column, set the pins for any letter, number, or symbol.</li>
+        <li><b>Leadership</b>Ran ME system meetings and led design reviews with our EE Chief.</li>
+        <li><b>Team</b>Six-person hardware team on Forge, a student product-design team.</li>
+      </ul>
     </div>
   </section>
 
@@ -87,7 +88,7 @@
         <div class="step"><div class="dot"><span class="mono">Rev D</span></div>
           <figure><img src="tactility-gallery-stepper.png" alt="CAD of a scaled-up six-pin Braille cell driven by stepper motors"><figcaption><b>Scaled-up stepper drive</b> Larger-scale cell driven by stepper motors. <span class="neutral">→ Replaced by N20 motors</span></figcaption></figure></div>
         <div class="step"><div class="dot"><span class="mono">Final</span></div>
-          <figure><img src="tactility-gallery-final.png" alt="Final rack-and-pinion mechanism actuating the six-pin array"><figcaption><b>Rack-and-pinion drive</b> Adds N20 motor actuation and new pin geometry that keeps pins from falling out. <span class="good">✓ Used in final prototype</span></figcaption></figure></div>
+          <figure><img src="tactility-gallery-final.png" alt="Final rack-and-pinion mechanism actuating the six-pin array"><figcaption><b>Rack-and-pinion drive</b> N20 motors + pin geometry that keeps pins in place. <span class="good">✓ Used in final prototype</span></figcaption></figure></div>
       </div>
     </div>
   </section>
@@ -102,8 +103,8 @@
       <div class="sec-head"><span class="mono">03</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="tactility-gallery-1.jpg" alt="3D-printed six-pin actuation mechanism prototype"><figcaption><span class="mono">Fig. 1</span>3D-printed six-pin actuation mechanism prototype</figcaption></figure>
-        <figure><img src="tactility-gallery-2.jpg" alt="Disassembled Braille cell with dummy 3D-printed components"><figcaption><span class="mono">Fig. 2</span>Disassembled cell with dummy 3D-printed components showing the internal actuation electronics</figcaption></figure>
-        <figure><img src="tactility-gallery-3.jpg" alt="Braille cell electronics wired on a breadboard"><figcaption><span class="mono">Fig. 3</span>Braille cell electronics wired up on a breadboard for testing</figcaption></figure>
+        <figure><img src="tactility-gallery-2.jpg" alt="Disassembled Braille cell with dummy 3D-printed components"><figcaption><span class="mono">Fig. 2</span>Disassembled cell showing the actuation electronics</figcaption></figure>
+        <figure><img src="tactility-gallery-3.jpg" alt="Braille cell electronics wired on a breadboard"><figcaption><span class="mono">Fig. 3</span>Cell electronics on a breadboard for testing</figcaption></figure>
       </div>
     </div>
   </section>

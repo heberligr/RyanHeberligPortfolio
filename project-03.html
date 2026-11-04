@@ -6,7 +6,7 @@
   <title>Punching Strength Tester — Ryan Heberlig</title>
   <meta name="description" content="An electromechanical punching strength tester rated for 450+ N loads, with a full sensor and UI stack.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -33,7 +33,7 @@
     <div class="wrap">
       <p class="mono crumbs"><a href="projects.html">← Projects</a> &nbsp;/&nbsp; Project 04</p>
       <h1>Punching Strength Tester</h1>
-      <p class="sub">An electromechanical punching bag rig, built to measure and display punch strength in real time using an accelerometer, LED lightstrip, and LCD screen.</p>
+      <p class="sub">A punching-bag rig that measures punch strength and shows it in real time.</p>
       <div class="spec"><div><span class="mono">Role</span><div class="v">Co-Developer</div></div><div><span class="mono">Course</span><div class="v">Cornerstone of Engineering I</div></div><div><span class="mono">Tools</span><div class="v">SolidWorks · 3D Printing · C++ · Arduino</div></div><div><span class="mono">Date</span><div class="v">Oct – Dec 2024</div></div></div>
     </div>
   </section>
@@ -53,19 +53,19 @@
   <section class="sec">
     <div class="wrap">
       <div class="numbers numbers--3"><div><div class="n">450+<small> N</small></div><p>Rated impact load</p></div><div><div class="n">Real-time</div><p>Score shown on LED strip and LCD</p></div><div><div class="n">C++</div><p>Accelerometer scoring on Arduino</p></div></div>
-      <div class="par"><div><span class="mono">Problem</span><h3>Survive repeated punches</h3><p>Build a target and mounting structure that survives repeated 450+ N impacts without damaging the sensor or frame.</p></div><div><span class="mono">Approach</span><h3>Laser-cut structure + sensing</h3><p>Designed and laser cut the target, braces, and spring mount in SolidWorks, then integrated an accelerometer, LED lightstrip, and LCD UI.</p></div><div><span class="mono">Result</span><h3>A repeatable tester</h3><p>A working punching strength tester rated for 450+ N loads with real-time visual and audio feedback.</p></div></div>
+      <div class="par"><div><span class="mono">Problem</span><h3>Survive repeated punches</h3><ul><li>Repeated 450+ N impacts</li><li>Protect the sensor and frame</li></ul></div><div><span class="mono">Approach</span><h3>Laser-cut structure + sensing</h3><ul><li>Target, braces, and spring mount in SolidWorks</li><li>Accelerometer, LED strip, and LCD UI</li></ul></div><div><span class="mono">Result</span><h3>A repeatable tester</h3><ul><li>Rated for 450+ N loads</li><li>Instant visual and audio feedback</li></ul></div></div>
     </div>
   </section>
 
-  <!-- OVERVIEW: free-form write-up. Keep paragraphs short. -->
+  <!-- KEY POINTS: one bold label + one short line each. -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">01</span><h2>Overview</h2><span class="dim"></span></div>
-      <div class="prose prose--center">
-        <p>For our Cornerstone of Engineering I team project, we set out to build an electromechanical punching strength tester rated to withstand loads over 450 N — sturdy enough to take a full-force punch repeatedly without the structure or sensor mount failing.</p>
-        <p>I designed and laser cut the target, mounting braces, and electronics housing in SolidWorks, making sure that parts were sturdy enough to withstand repeated wear cycles from human punches. On the electronics side, I worked to convert accelerometer data into a scoring system to measure punch force, all driven with C++ on an Arduino.</p>
-        <p>The result is shown above: a user presses the start button, gets prompted to throw a punch, and sees their strength reflected instantly through the lightstrip and LCD readout — turning a raw accelerometer signal into immediate visual and audio feedback.</p>
-      </div>
+      <div class="sec-head"><span class="mono">01</span><h2>What I did</h2><span class="dim"></span></div>
+      <ul class="points">
+        <li><b>Structure</b>Designed and laser cut the target, mounting braces, and electronics housing to survive repeated punches.</li>
+        <li><b>Scoring</b>Turned raw accelerometer data into a punch-force score in C++ on an Arduino.</li>
+        <li><b>User flow</b>Press start → throw a punch → see your score on the lightstrip and LCD.</li>
+      </ul>
     </div>
   </section>
 
