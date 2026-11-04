@@ -6,7 +6,7 @@
   <title>Tactility — Refreshable Braille E-Reader — Ryan Heberlig</title>
   <meta name="description" content="A refreshable Braille e-reader that translates PDF text into physical Braille characters.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -48,43 +48,40 @@
   </section>
 
   <!-- =========================================================
-       KEY NUMBERS
-       ========================================================= -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="numbers"><div><div class="n">1.5<small> mm</small></div><p>Standard Braille dot size, held exactly</p></div><div><div class="n">6</div><p>Pins per cell</p></div><div><div class="n">2</div><p>N20 motors per cell</p></div><div><div class="n">$350</div><p>Total budget</p></div></div>
-    </div>
-  </section>
-
-  <!-- =========================================================
        STORY SECTIONS — one <article class="chapter"> per step.
-       Left: step label + headline. Right: one lead sentence,
-       then a few short .detail blocks (title + one sentence).
+       Left: numbered label, big headline, optional stat.
+       Right: one or two short paragraphs (a sentence or two each).
        ========================================================= -->
   <section class="chapters">
     <div class="wrap">
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">01 · Problem</span><h2>Too small, too expensive</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">1.0</span><span class="mono">The problem</span></div>
+          <h2>Too small, too expensive.</h2><div class="chapter-stat"><span class="n">$350</span><span class="mono">Total budget</span></div>
+        </header>
         <div class="chapter-body">
-          <p class="lead">Refreshable Braille displays drive every dot with its own actuator, which is too tiny and too costly for a $350, one-semester build.</p>
-          <div class="detail"><h3>The goal</h3><p>Take a PDF, translate it to Braille, and render it one line at a time.</p></div>
+          <p>Refreshable Braille displays drive every dot with its own actuator, which is too tiny and too costly for a one-semester student build.</p>
+          <p>Our goal was to take a PDF, translate it to Braille, and render it one line at a time.</p>
         </div>
       </article>
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">02 · Approach</span><h2>A lock-and-key mechanism</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">2.0</span><span class="mono">The approach</span></div>
+          <h2>A lock-and-key mechanism.</h2><div class="chapter-stat"><span class="n">2</span><span class="mono">N20 motors per cell</span></div>
+        </header>
         <div class="chapter-body">
-          <p class="lead">Instead of squeezing an actuator behind every dot, I moved the size constraint into the gaps between letters.</p>
-          <div class="detail"><h3>Like a door lock</h3><p>A key bumps pins to different heights based on its shape.</p></div>
-          <div class="detail"><h3>Two motors per cell</h3><p>N20 DC-motor “keys”, one per column, set the pins for any letter, number, or symbol.</p></div>
-          <div class="detail"><h3>True to standard</h3><p>Every dot stays at the 1.5 mm Braille size.</p></div>
+          <p>Instead of squeezing an actuator behind every dot, I moved the size constraint into the gaps between letters, so every dot stays at the true 1.5 mm Braille standard.</p>
+          <p>It works like a door lock: two N20 motor-driven “keys”, one per column, bump six pins to the right heights for any letter, number, or symbol.</p>
         </div>
       </article>
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">03 · Result</span><h2>A working prototype</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">3.0</span><span class="mono">The result</span></div>
+          <h2>A working prototype.</h2><div class="chapter-stat"><span class="n">6</span><span class="mono">Person hardware team</span></div>
+        </header>
         <div class="chapter-body">
-          <p class="lead">The device translates real PDF text into physical Braille, a capability that normally costs thousands.</p>
-          <div class="detail"><h3>My role</h3><p>Designed the mechanism, ran ME system meetings, and led design reviews with our EE Chief.</p></div>
-          <div class="detail"><h3>Team</h3><p>Six-person hardware team on Forge, a student product-design team.</p></div>
+          <p>The device translates real PDF text into physical Braille, something that normally costs thousands.</p>
+          <p>Beyond the mechanism, I ran our ME system meetings and led design reviews with our EE Chief on Forge, a student product-design team.</p>
         </div>
       </article>
     </div>
@@ -97,7 +94,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">04</span><h2>Design iterations</h2><span class="dim"></span><span class="mono">5 revisions</span></div>
+      <div class="sec-head"><span class="mono">4.0</span><h2>Design iterations</h2><span class="dim"></span><span class="mono">5 revisions</span></div>
       <div class="timeline gallery-grid">
         <div class="step"><div class="dot"><span class="mono">Rev A</span></div>
           <figure><img src="tactility-gallery-v1.png" alt="Cross-section of the initial six-pin actuation concept, manually actuated"><figcaption><b>Initial proof of concept</b> Manually actuated. <span class="bad">✕ Prone to jamming</span></figcaption></figure></div>
@@ -120,7 +117,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">05</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">5.0</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="tactility-gallery-1.jpg" alt="3D-printed six-pin actuation mechanism prototype"><figcaption><span class="mono">Fig. 1</span>3D-printed six-pin actuation mechanism prototype</figcaption></figure>
         <figure><img src="tactility-gallery-2.jpg" alt="Disassembled Braille cell with dummy 3D-printed components"><figcaption><span class="mono">Fig. 2</span>Disassembled cell showing the actuation electronics</figcaption></figure>

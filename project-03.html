@@ -6,7 +6,7 @@
   <title>Punching Strength Tester — Ryan Heberlig</title>
   <meta name="description" content="An electromechanical punching strength tester rated for 450+ N loads, with a full sensor and UI stack.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -48,40 +48,38 @@
   </section>
 
   <!-- =========================================================
-       KEY NUMBERS
-       ========================================================= -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="numbers numbers--3"><div><div class="n">450+<small> N</small></div><p>Rated impact load</p></div><div><div class="n">Real-time</div><p>Score shown on LED strip and LCD</p></div><div><div class="n">C++</div><p>Accelerometer scoring on Arduino</p></div></div>
-    </div>
-  </section>
-
-  <!-- =========================================================
        STORY SECTIONS — one <article class="chapter"> per step.
-       Left: step label + headline. Right: one lead sentence,
-       then a few short .detail blocks (title + one sentence).
+       Left: numbered label, big headline, optional stat.
+       Right: one or two short paragraphs (a sentence or two each).
        ========================================================= -->
   <section class="chapters">
     <div class="wrap">
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">01 · Problem</span><h2>Survive a full-force punch</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">1.0</span><span class="mono">The problem</span></div>
+          <h2>Survive a full-force punch.</h2><div class="chapter-stat"><span class="n">450+ N</span><span class="mono">Rated impact load</span></div>
+        </header>
         <div class="chapter-body">
-          <p class="lead">Build a target and mount that take repeated 450+ N punches without the frame or sensor failing.</p>
+          <p>For Cornerstone of Engineering I, our team set out to build a punching strength tester that takes repeated full-force punches without the frame or sensor failing.</p>
         </div>
       </article>
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">02 · Approach</span><h2>Laser-cut structure + sensing</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">2.0</span><span class="mono">The approach</span></div>
+          <h2>Laser-cut structure, real sensing.</h2>
+        </header>
         <div class="chapter-body">
-          <p class="lead">I designed the structure in SolidWorks and turned an accelerometer signal into a score.</p>
-          <div class="detail"><h3>Structure</h3><p>Laser-cut target, mounting braces, and electronics housing, built for repeated impacts.</p></div>
-          <div class="detail"><h3>Scoring</h3><p>Accelerometer data converted into a punch-force score in C++ on an Arduino.</p></div>
+          <p>I designed and laser cut the target, mounting braces, and electronics housing in SolidWorks, built to survive repeated impacts.</p>
+          <p>On the electronics side, I turned accelerometer data into a punch-force score in C++ on an Arduino.</p>
         </div>
       </article>
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">03 · Result</span><h2>Instant feedback</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">3.0</span><span class="mono">The result</span></div>
+          <h2>Instant feedback.</h2>
+        </header>
         <div class="chapter-body">
-          <p class="lead">Press start, throw a punch, and see your strength on the LED strip and LCD.</p>
-          <div class="detail"><h3>Built to last</h3><p>Rated for repeated loads over 450 N.</p></div>
+          <p>Press start, throw a punch, and your strength shows up instantly on the LED strip and LCD, with audio feedback too.</p>
         </div>
       </article>
     </div>
@@ -94,7 +92,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">04</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">4.0</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="punch-thumb.jpg" alt="Full punching strength tester rig set up on a table, with a punch target, start button, and LCD readout"><figcaption><span class="mono">Fig. 1</span>The full rig: punch target, start button, and LCD readout</figcaption></figure>
         <figure><img src="punch-gallery-1.jpg" alt="Laser-cut enclosure for the start button and LCD display, showing the front panel cutouts"><figcaption><span class="mono">Fig. 2</span>Laser-cut enclosure for the start button and display</figcaption></figure>

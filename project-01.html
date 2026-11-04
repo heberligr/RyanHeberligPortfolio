@@ -6,7 +6,7 @@
   <title>Raceway Power Distribution System — Ryan Heberlig</title>
   <meta name="description" content="A redesigned raceway-style power distribution system for a low-pressure molding station at Amphenol PCD, eliminating downtime and raising molding capacity by 25%.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -47,45 +47,40 @@
   </section>
 
   <!-- =========================================================
-       KEY NUMBERS
-       ========================================================= -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="numbers"><div><div class="n">0</div><p>Downtime after the redesign</p></div><div><div class="n">+25%</div><p>Concurrent molding capacity</p></div><div><div class="n">16 : 8</div><p>Molds to stations</p></div><div><div class="n">Quick-swap</div><p>Where nearly all failures now happen</p></div></div>
-    </div>
-  </section>
-
-  <!-- =========================================================
        STORY SECTIONS — one <article class="chapter"> per step.
-       Left: step label + headline. Right: one lead sentence,
-       then a few short .detail blocks (title + one sentence).
+       Left: numbered label, big headline, optional stat.
+       Right: one or two short paragraphs (a sentence or two each).
        ========================================================= -->
   <section class="chapters">
     <div class="wrap">
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">01 · Problem</span><h2>Station failures stopped production</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">1.0</span><span class="mono">The problem</span></div>
+          <h2>Station failures stopped production.</h2><div class="chapter-stat"><span class="n">16 : 8</span><span class="mono">Molds to stations</span></div>
+        </header>
         <div class="chapter-body">
-          <p class="lead">The line ran 16 molds on 8 stations, and hardware failures kept taking stations offline.</p>
-          <div class="detail"><h3>Stuck cartridges</h3><p>Heating cartridges needed modifying before use and stuck in the molds, so every failure meant downtime.</p></div>
-          <div class="detail"><h3>Unreachable wiring</h3><p>Free-hanging station wiring was hard to access and replace.</p></div>
-          <div class="detail"><h3>Stations are the bottleneck</h3><p>A bad mold can sit out a run. A bad station cuts concurrent run time.</p></div>
+          <p>The line ran 16 molds on 8 stations, and failing heating cartridges and thermocouples kept taking stations offline. Cartridges had to be modified before use and stuck in the molds, and the free-hanging wiring was hard to reach.</p>
+          <p>A bad mold could sit out a run. A bad station cut concurrent run time.</p>
         </div>
       </article>
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">02 · Approach</span><h2>Protect the station, standardize the parts</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">2.0</span><span class="mono">The approach</span></div>
+          <h2>Protect the station, standardize the parts.</h2>
+        </header>
         <div class="chapter-body">
-          <p class="lead">I rebuilt the station's power distribution around a raceway and replaced failure-prone parts with durable, standard ones.</p>
-          <div class="detail"><h3>Raceway</h3><p>Lifts wiring away from the heated molds and keeps it easy to reach for maintenance.</p></div>
-          <div class="detail"><h3>Standard cartridges</h3><p>Stainless-braided cartridges, sourced with suppliers, that drop in with no modification.</p></div>
-          <div class="detail"><h3>Better parts</h3><p>Larger thermocouples, voltage-matched connectors, and coolant manifolds in place of leaky PVC.</p></div>
-          <div class="detail"><h3>Hands-on build</h3><p>I 3D printed brackets, machined parts, and wired the raceway myself, with input from operators.</p></div>
+          <p>I rebuilt the station's power distribution around a raceway that lifts wiring away from the heated molds and keeps it easy to reach. I worked with suppliers on stainless-braided cartridges that drop in with no modification, and upgraded to larger thermocouples, voltage-matched connectors, and coolant manifolds in place of leaky PVC.</p>
+          <p>I 3D printed the brackets, machined parts, and wired and assembled the raceway myself, with input from the operators.</p>
         </div>
       </article>
       <article class="chapter">
-        <header class="chapter-head"><span class="mono">03 · Result</span><h2>Zero downtime</h2></header>
+        <header class="chapter-head">
+          <div class="chapter-label"><span class="chip">3.0</span><span class="mono">The result</span></div>
+          <h2>Zero downtime.</h2><div class="chapter-stat"><span class="n">+25%</span><span class="mono">Concurrent molding capacity</span></div>
+        </header>
         <div class="chapter-body">
-          <p class="lead">Station-side failures were designed out, and nearly all remaining failures are quick thermocouple swaps.</p>
-          <div class="detail"><h3>+25% capacity</h3><p>The correctly specced connectors draw less power, so more molds can run at once.</p></div>
+          <p>Station-side failures were designed out, and nearly all remaining failures are quick thermocouple swaps.</p>
+          <p>The correctly specced connectors draw less power, so more molds can run at once.</p>
         </div>
       </article>
     </div>
@@ -98,7 +93,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">04</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">4.0</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="RacewayInitial.JPG" alt="Mold station before the redesign"><figcaption><span class="mono">Fig. 1</span>Before: exposed, free-hanging wiring at the mold station</figcaption></figure>
         <figure><img src="RacewayWiring.JPG" alt="Internal raceway wiring"><figcaption><span class="mono">Fig. 2</span>The new raceway wiring, organized and protected</figcaption></figure>
