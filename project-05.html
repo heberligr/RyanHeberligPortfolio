@@ -6,7 +6,7 @@
   <title>Production Fixtures &amp; Tooling — Ryan Heberlig</title>
   <meta name="description" content="Machined production fixtures and tooling designed at Amphenol PCD, including a pneumatic diode lead-bending fixture that cut process time by 89%.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -38,9 +38,8 @@
     </div>
   </section>
 
-
   <!-- =========================================================
-       KEY NUMBERS + PROBLEM / APPROACH / RESULT
+       KEY NUMBERS
        ========================================================= -->
   <section class="sec">
     <div class="wrap">
@@ -49,30 +48,40 @@
     </div>
   </section>
 
-
-
   <!-- =========================================================
-       SELECTED FIXTURES
-       One <article class="fixture"> per fixture. No photos:
-       these parts are proprietary to Amphenol PCD.
+       STORY SECTIONS — one <article class="chapter"> per step.
+       Left: step label + headline. Right: one lead sentence,
+       then a few short .detail blocks (title + one sentence).
        ========================================================= -->
-  <section class="sec sec--tight">
+  <section class="chapters">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">01</span><h2>Selected fixtures</h2><span class="dim"></span><span class="mono">3 of 18</span></div>
-      <div class="fixtures">
-        <article class="fixture">
-          <div class="fixture-head"><span class="mono">F-01</span><h3>Pneumatic diode lead-bending fixture</h3><span class="metric">3 min → 20 s · −89%</span></div>
-          <div class="par"><div><span class="mono">Problem</span><ul><li>Multistep, mostly manual: ~3 min per part</li><li>Leads bent to the wrong shape</li><li>Pressed into housings by hand with pliers</li></ul></div><div><span class="mono">Design</span><ul><li>Rotary bending stage + pneumatic press in one fixture</li><li>Leads bent to match the part, then pressed straight in</li></ul></div><div><span class="mono">Result</span><ul><li>~3 min → ~20 s (−89%)</li><li>Correct lead geometry before pressing</li></ul></div></div>
-        </article>
-        <article class="fixture">
-          <div class="fixture-head"><span class="mono">F-02</span><h3>Universal ultrasonic-welding clamp system</h3><span class="metric">1 plate · 3 swappable fixture sets</span></div>
-          <div class="par"><div><span class="mono">Problem</span><ul><li>Every welder fixture had its own clamp and base plate</li><li>Extra cost, hardware, and storage space</li></ul></div><div><span class="mono">Design</span><ul><li>One universal clamping plate</li><li>3 fixture sets that mount to it</li></ul></div><div><span class="mono">Result</span><ul><li>Swappable fixturing, far less duplicate hardware</li><li>Cheaper, faster replacements for broken fixtures</li></ul></div></div>
-        </article>
-        <article class="fixture">
-          <div class="fixture-head"><span class="mono">F-03</span><h3>Multi-contact diode press head</h3><span class="metric">5 contacts at once · −15% process time</span></div>
-          <div class="par"><div><span class="mono">Problem</span><ul><li>Old head pressed one contact at a time</li><li>Play in the arbor forced a pause to realign</li></ul></div><div><span class="mono">Design</span><ul><li>Locates on the part itself, not the arbor</li><li>Presses all 5 contacts at once</li></ul></div><div><span class="mono">Result</span><ul><li>No realigning; −15% total process time</li><li>CAD on file for replacement tooling</li></ul></div></div>
-        </article>
-      </div>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">F-01</span><h2>Pneumatic diode lead-bending fixture</h2><span class="metric">3 min → 20 s · −89%</span></header>
+        <div class="chapter-body">
+          <p class="lead">Turned a slow, mostly manual bend-and-press into one fast operation.</p>
+          <div class="detail"><h3>Problem</h3><p>Leads were bent to the wrong shape, then pressed into housings by hand with pliers: about 3 minutes per part.</p></div>
+          <div class="detail"><h3>Design</h3><p>A rotary bending stage and a pneumatic press in one fixture bend the leads to match the part, then press them straight in.</p></div>
+          <div class="detail"><h3>Result</h3><p>About 20 seconds per part, an 89% reduction.</p></div>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">F-02</span><h2>Universal ultrasonic-welding clamp system</h2><span class="metric">1 plate · 3 fixture sets</span></header>
+        <div class="chapter-body">
+          <p class="lead">One shared plate replaced a dedicated clamp and base for every welder fixture.</p>
+          <div class="detail"><h3>Problem</h3><p>Each ultrasonic-welder fixture had its own clamp and bottom plate, adding cost, hardware, and storage.</p></div>
+          <div class="detail"><h3>Design</h3><p>A universal clamping plate with three fixture sets that mount to it.</p></div>
+          <div class="detail"><h3>Result</h3><p>Swappable fixturing with far less duplicate hardware, and cheaper replacements for broken fixtures.</p></div>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">F-03</span><h2>Multi-contact diode press head</h2><span class="metric">5 contacts · −15% time</span></header>
+        <div class="chapter-body">
+          <p class="lead">Pressing all five contacts at once removed the stop-and-realign step.</p>
+          <div class="detail"><h3>Problem</h3><p>The old head pressed one contact at a time, and play in the arbor forced the operator to pause and realign.</p></div>
+          <div class="detail"><h3>Design</h3><p>A new head that locates on the part itself, not the arbor, and presses all 5 contacts together.</p></div>
+          <div class="detail"><h3>Result</h3><p>15% less total process time, with CAD on file for replacement tooling.</p></div>
+        </div>
+      </article>
       <p class="mono note">All 18 documented with Creo drawings · Photos withheld: proprietary to Amphenol PCD</p>
     </div>
   </section>

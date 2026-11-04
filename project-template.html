@@ -6,7 +6,7 @@
   <title>Project Title — Ryan Heberlig</title>
   <meta name="description" content="One-line description of this project for search results and link previews.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -46,25 +46,43 @@
   </section>
 
   <!-- =========================================================
-       KEY NUMBERS + PROBLEM / APPROACH / RESULT
+       KEY NUMBERS
        ========================================================= -->
   <section class="sec">
     <div class="wrap">
       <div class="numbers numbers--3"><div><div class="n">00%</div><p>A headline result</p></div><div><div class="n">00</div><p>Another key number</p></div><div><div class="n">00</div><p>Another key number</p></div></div>
-      <div class="par"><div><span class="mono">Problem</span><h3>Short headline</h3><ul><li>What was wrong — a few words</li><li>Key constraint</li></ul></div><div><span class="mono">Approach</span><h3>Short headline</h3><ul><li>What you designed or built</li><li>Key design decision</li></ul></div><div><span class="mono">Result</span><h3>Short headline</h3><ul><li>What changed, ideally with a number</li></ul></div></div>
     </div>
   </section>
 
-  <!-- KEY POINTS: one bold label + one short line each. -->
-  <section class="sec sec--tight">
+  <!-- =========================================================
+       STORY SECTIONS — one <article class="chapter"> per step.
+       Left: step label + headline. Right: one lead sentence,
+       then a few short .detail blocks (title + one sentence).
+       ========================================================= -->
+  <section class="chapters">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">01</span><h2>What I did</h2><span class="dim"></span></div>
-      <ul class="points">
-        <li><b>Label</b>One short line about this piece of the work.</li>
-        <li><b>Label</b>One short line about this piece of the work.</li>
-        <li><b>Label</b>One short line about this piece of the work.</li>
-        <li><b>Label</b>One short line about this piece of the work.</li>
-      </ul>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">01 · Problem</span><h2>Short headline</h2></header>
+        <div class="chapter-body">
+          <p class="lead">One sentence: what was wrong or what needed to exist.</p>
+          <div class="detail"><h3>Detail</h3><p>One short sentence.</p></div>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">02 · Approach</span><h2>Short headline</h2></header>
+        <div class="chapter-body">
+          <p class="lead">One sentence: what you designed or built.</p>
+          <div class="detail"><h3>Detail</h3><p>One short sentence.</p></div>
+          <div class="detail"><h3>Detail</h3><p>One short sentence.</p></div>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">03 · Result</span><h2>Short headline</h2></header>
+        <div class="chapter-body">
+          <p class="lead">One sentence: what changed, ideally with a number.</p>
+          <div class="detail"><h3>Detail</h3><p>One short sentence.</p></div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -75,7 +93,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">02</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">04</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="your-photo-1.jpg" alt="Describe the photo"><figcaption><span class="mono">Fig. 1</span>Caption shown under the photo and in the full-size view</figcaption></figure>
         <figure><img src="your-photo-2.jpg" alt="Describe the photo"><figcaption><span class="mono">Fig. 2</span>Caption shown under the photo and in the full-size view</figcaption></figure>

@@ -6,7 +6,7 @@
   <title>Tactility — Refreshable Braille E-Reader — Ryan Heberlig</title>
   <meta name="description" content="A refreshable Braille e-reader that translates PDF text into physical Braille characters.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -48,25 +48,45 @@
   </section>
 
   <!-- =========================================================
-       KEY NUMBERS + PROBLEM / APPROACH / RESULT
+       KEY NUMBERS
        ========================================================= -->
   <section class="sec">
     <div class="wrap">
       <div class="numbers"><div><div class="n">1.5<small> mm</small></div><p>Standard Braille dot size, held exactly</p></div><div><div class="n">6</div><p>Pins per cell</p></div><div><div class="n">2</div><p>N20 motors per cell</p></div><div><div class="n">$350</div><p>Total budget</p></div></div>
-      <div class="par"><div><span class="mono">Problem</span><h3>Too small, too expensive</h3><ul><li>Commercial displays drive every dot separately</li><li>Those actuators are too tiny and costly for $350</li></ul></div><div><span class="mono">Approach</span><h3>A lock-and-key mechanism</h3><ul><li>Size constraint moved to the gaps between letters</li><li>Motor-driven “keys” set pin heights, like a door lock</li></ul></div><div><span class="mono">Result</span><h3>A working prototype</h3><ul><li>Real PDF text rendered as physical Braille</li><li>Built and demoed by a 6-person team</li></ul></div></div>
     </div>
   </section>
 
-  <!-- KEY POINTS: one bold label + one short line each. -->
-  <section class="sec sec--tight">
+  <!-- =========================================================
+       STORY SECTIONS — one <article class="chapter"> per step.
+       Left: step label + headline. Right: one lead sentence,
+       then a few short .detail blocks (title + one sentence).
+       ========================================================= -->
+  <section class="chapters">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">01</span><h2>What I did</h2><span class="dim"></span></div>
-      <ul class="points">
-        <li><b>Mechanism design</b>Designed the lock-and-key Braille cell, keeping every dot at the true 1.5 mm standard.</li>
-        <li><b>Actuation</b>Two N20 DC-motor “keys” per cell, one per column, set the pins for any letter, number, or symbol.</li>
-        <li><b>Leadership</b>Ran ME system meetings and led design reviews with our EE Chief.</li>
-        <li><b>Team</b>Six-person hardware team on Forge, a student product-design team.</li>
-      </ul>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">01 · Problem</span><h2>Too small, too expensive</h2></header>
+        <div class="chapter-body">
+          <p class="lead">Refreshable Braille displays drive every dot with its own actuator, which is too tiny and too costly for a $350, one-semester build.</p>
+          <div class="detail"><h3>The goal</h3><p>Take a PDF, translate it to Braille, and render it one line at a time.</p></div>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">02 · Approach</span><h2>A lock-and-key mechanism</h2></header>
+        <div class="chapter-body">
+          <p class="lead">Instead of squeezing an actuator behind every dot, I moved the size constraint into the gaps between letters.</p>
+          <div class="detail"><h3>Like a door lock</h3><p>A key bumps pins to different heights based on its shape.</p></div>
+          <div class="detail"><h3>Two motors per cell</h3><p>N20 DC-motor “keys”, one per column, set the pins for any letter, number, or symbol.</p></div>
+          <div class="detail"><h3>True to standard</h3><p>Every dot stays at the 1.5 mm Braille size.</p></div>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">03 · Result</span><h2>A working prototype</h2></header>
+        <div class="chapter-body">
+          <p class="lead">The device translates real PDF text into physical Braille, a capability that normally costs thousands.</p>
+          <div class="detail"><h3>My role</h3><p>Designed the mechanism, ran ME system meetings, and led design reviews with our EE Chief.</p></div>
+          <div class="detail"><h3>Team</h3><p>Six-person hardware team on Forge, a student product-design team.</p></div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -77,7 +97,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">02</span><h2>Design iterations</h2><span class="dim"></span><span class="mono">5 revisions</span></div>
+      <div class="sec-head"><span class="mono">04</span><h2>Design iterations</h2><span class="dim"></span><span class="mono">5 revisions</span></div>
       <div class="timeline gallery-grid">
         <div class="step"><div class="dot"><span class="mono">Rev A</span></div>
           <figure><img src="tactility-gallery-v1.png" alt="Cross-section of the initial six-pin actuation concept, manually actuated"><figcaption><b>Initial proof of concept</b> Manually actuated. <span class="bad">✕ Prone to jamming</span></figcaption></figure></div>
@@ -100,7 +120,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">03</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">05</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="tactility-gallery-1.jpg" alt="3D-printed six-pin actuation mechanism prototype"><figcaption><span class="mono">Fig. 1</span>3D-printed six-pin actuation mechanism prototype</figcaption></figure>
         <figure><img src="tactility-gallery-2.jpg" alt="Disassembled Braille cell with dummy 3D-printed components"><figcaption><span class="mono">Fig. 2</span>Disassembled cell showing the actuation electronics</figcaption></figure>

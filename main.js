@@ -9,6 +9,8 @@
      3. Gallery lightbox (click a gallery photo to view it full
         size, uncropped, and step through the rest of that
         gallery — see any project page's .gallery-grid)
+     4. Section fade-in (project-page .chapter sections ease in
+        as they scroll into view)
    No build step needed — just edit this file directly and
    refresh the browser.
    ============================================================= */
@@ -149,6 +151,21 @@ document.addEventListener('DOMContentLoaded', function () {
       else if (deltaX < -SWIPE_THRESHOLD) showImage(currentIndex + 1);
       touchStartX = null;
     });
+  }
+
+  /* ---------- 4. Section fade-in ---------- */
+  // Each .chapter fades in once as it enters the viewport, so the
+  // reader's eye lands on one section at a time. Skipped for
+  // reduced-motion users and browsers without IntersectionObserver.
+  var chapters = document.querySelectorAll('.chapter');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (chapters.length && 'IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    chapters.forEach(function (c) { c.classList.add('reveal'); io.observe(c); });
   }
 
 });

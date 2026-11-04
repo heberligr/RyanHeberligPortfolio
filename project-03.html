@@ -6,7 +6,7 @@
   <title>Punching Strength Tester — Ryan Heberlig</title>
   <meta name="description" content="An electromechanical punching strength tester rated for 450+ N loads, with a full sensor and UI stack.">
   <meta name="theme-color" content="#0F1114">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body data-page="projects" class="project-page">
 
@@ -48,24 +48,42 @@
   </section>
 
   <!-- =========================================================
-       KEY NUMBERS + PROBLEM / APPROACH / RESULT
+       KEY NUMBERS
        ========================================================= -->
   <section class="sec">
     <div class="wrap">
       <div class="numbers numbers--3"><div><div class="n">450+<small> N</small></div><p>Rated impact load</p></div><div><div class="n">Real-time</div><p>Score shown on LED strip and LCD</p></div><div><div class="n">C++</div><p>Accelerometer scoring on Arduino</p></div></div>
-      <div class="par"><div><span class="mono">Problem</span><h3>Survive repeated punches</h3><ul><li>Repeated 450+ N impacts</li><li>Protect the sensor and frame</li></ul></div><div><span class="mono">Approach</span><h3>Laser-cut structure + sensing</h3><ul><li>Target, braces, and spring mount in SolidWorks</li><li>Accelerometer, LED strip, and LCD UI</li></ul></div><div><span class="mono">Result</span><h3>A repeatable tester</h3><ul><li>Rated for 450+ N loads</li><li>Instant visual and audio feedback</li></ul></div></div>
     </div>
   </section>
 
-  <!-- KEY POINTS: one bold label + one short line each. -->
-  <section class="sec sec--tight">
+  <!-- =========================================================
+       STORY SECTIONS — one <article class="chapter"> per step.
+       Left: step label + headline. Right: one lead sentence,
+       then a few short .detail blocks (title + one sentence).
+       ========================================================= -->
+  <section class="chapters">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">01</span><h2>What I did</h2><span class="dim"></span></div>
-      <ul class="points">
-        <li><b>Structure</b>Designed and laser cut the target, mounting braces, and electronics housing to survive repeated punches.</li>
-        <li><b>Scoring</b>Turned raw accelerometer data into a punch-force score in C++ on an Arduino.</li>
-        <li><b>User flow</b>Press start → throw a punch → see your score on the lightstrip and LCD.</li>
-      </ul>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">01 · Problem</span><h2>Survive a full-force punch</h2></header>
+        <div class="chapter-body">
+          <p class="lead">Build a target and mount that take repeated 450+ N punches without the frame or sensor failing.</p>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">02 · Approach</span><h2>Laser-cut structure + sensing</h2></header>
+        <div class="chapter-body">
+          <p class="lead">I designed the structure in SolidWorks and turned an accelerometer signal into a score.</p>
+          <div class="detail"><h3>Structure</h3><p>Laser-cut target, mounting braces, and electronics housing, built for repeated impacts.</p></div>
+          <div class="detail"><h3>Scoring</h3><p>Accelerometer data converted into a punch-force score in C++ on an Arduino.</p></div>
+        </div>
+      </article>
+      <article class="chapter">
+        <header class="chapter-head"><span class="mono">03 · Result</span><h2>Instant feedback</h2></header>
+        <div class="chapter-body">
+          <p class="lead">Press start, throw a punch, and see your strength on the LED strip and LCD.</p>
+          <div class="detail"><h3>Built to last</h3><p>Rated for repeated loads over 450 N.</p></div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -76,7 +94,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">02</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">04</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="punch-thumb.jpg" alt="Full punching strength tester rig set up on a table, with a punch target, start button, and LCD readout"><figcaption><span class="mono">Fig. 1</span>The full rig: punch target, start button, and LCD readout</figcaption></figure>
         <figure><img src="punch-gallery-1.jpg" alt="Laser-cut enclosure for the start button and LCD display, showing the front panel cutouts"><figcaption><span class="mono">Fig. 2</span>Laser-cut enclosure for the start button and display</figcaption></figure>
