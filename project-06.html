@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Pill Dispenser: Rotary Indexing Mechanism — Ryan Heberlig</title>
+  <meta name="description" content="Designing a compact, single-motor rotary mechanism that stores and presents individual pill doses for the travel unit of an app-connected pill dispenser.">
+  <meta name="theme-color" content="#0F1114">
+  <link rel="stylesheet" href="style.css?v=11">
+</head>
+<body data-page="projects" class="project-page">
+
+  <!-- NAV BAR (identical on every page) -->
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="index.html" class="brand">Ryan Heberlig<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Work</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="resume.html" data-page="resume" class="nav-cta">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       PROJECT HEADER + SPEC BOX
+       ========================================================= -->
+  <section class="p-hero grid-paper">
+    <div class="wrap">
+      <p class="mono crumbs"><a href="projects.html">← Projects</a> &nbsp;/&nbsp; Project 06</p>
+      <h1>Travel Pill Dispenser: Rotary Indexing Mechanism</h1>
+      <p class="sub">Designing a compact, single-motor rotary mechanism that stores and presents individual pill doses for the travel unit of an app-connected pill dispenser.</p>
+      <div class="spec"><div><span class="mono">Role</span><div class="v">Hardware Engineer</div></div><div><span class="mono">Team</span><div class="v">Generate Product Development Studio · Hardware</div></div><div><span class="mono">Status</span><div class="v">● In progress · Prototyping</div></div><div><span class="mono">Date</span><div class="v">Sep 2026 – Present</div></div></div>
+    </div>
+  </section>
+
+  <!-- MAIN PHOTO / DEMO VIDEO (one item with p-media--single; remove that class to put two side by side)
+       PLACEHOLDER: replace the <div class="img-ph"> with
+       <img src="pill-hero.png" class="is-cad" alt="..."> once the render is ready. -->
+  <section class="p-media p-media--single">
+    <div class="wrap">
+      <div class="img-ph"><span class="mono">Image coming soon</span><b>CAD render of the disk, housing, and motor</b></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       KEY NUMBERS + CHALLENGE / APPROACH / STATUS
+       (numbers are design targets, not test results)
+       ========================================================= -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="numbers"><div><div class="n">~90<small> mm</small></div><p>Target disk diameter</p></div><div><div class="n">8</div><p>Dose compartments, 1–4 pills each</p></div><div><div class="n">45°</div><p>Per index step, one compartment at a time</p></div><div><div class="n">0<small> W</small></div><p>Holding power required by the design</p></div></div>
+      <div class="par"><div><span class="mono">Challenge</span><h3>Small, steady, low-power</h3><p>Index a dose disk in repeatable 45° steps on a 7.4 V, 1 A battery budget, and keep it from slipping when the unit gets bumped around in a bag.</p></div><div><span class="mono">Approach</span><h3>A self-locking worm drive</h3><p>Worked through detents and a Geneva drive before recommending an N20 worm gearmotor, which holds the disk with no power and leaves a large torque margin.</p></div><div><span class="mono">Status</span><h3>Prototyping</h3><p>The mechanism is modeled parametrically in Onshape and now in prototyping. No test results yet.</p></div></div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW: free-form write-up. Keep paragraphs short. -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">01</span><h2>Overview</h2><span class="dim"></span></div>
+      <div class="prose prose--center">
+        <p>Generate, Northeastern's student product development studio, is developing a connected pill dispenser with two parts: a home unit and a portable travel unit. I'm on the hardware team, designing the travel unit's mechanism.</p>
+        <p>The mechanism is a rotating disk of compartments, each holding a 1–4 pill dose. It indexes one compartment at a time to an access opening, where the user takes the dose. It has to do that with one motor, fit in a bag, run on a battery, and know whether pills are actually there.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       REQUIREMENTS
+       One <li> per requirement: label on the left, spec on the right.
+       ========================================================= -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">02</span><h2>Requirements</h2><span class="dim"></span><span class="mono">5 requirements</span></div>
+      <ul class="reqs">
+        <li><span class="mono">Size</span><span class="v">Portable, with a disk about 90 mm across</span></li>
+        <li><span class="mono">Power</span><span class="v">Battery powered: 7.4 V, at most 1 A per phase</span></li>
+        <li><span class="mono">Indexing</span><span class="v">Repeatable discrete steps: 45° for 8 compartments</span></li>
+        <li><span class="mono">Holding</span><span class="v">Holds position against bumps in a bag, using no power</span></li>
+        <li><span class="mono">Sensing</span><span class="v">Detects whether pills are present at the opening</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DESIGN APPROACH
+       One <article class="fixture"> per design step, oldest first.
+       The chip says where each option landed.
+       ========================================================= -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">03</span><h2>Design approach</h2><span class="dim"></span><span class="mono">5 steps</span></div>
+      <div class="fixtures">
+        <article class="fixture">
+          <div class="fixture-head"><span class="mono">Step 1</span><h3>BLDC starting point</h3><span class="bad">✕ Can't hold unpowered</span></div>
+          <p class="prose">The electrical team wanted to use a gimbal BLDC motor. A BLDC can't hold its position without power, so the disk would need a separate way to stay put between doses.</p>
+        </article>
+        <article class="fixture">
+          <div class="fixture-head"><span class="mono">Step 2</span><h3>Detents</h3><span class="bad">✕ Needed a ~14:1 gearbox</span></div>
+          <p class="prose">I ran torque and factor-of-safety calculations on a detent hold. Detents strong enough to resist bumps needed more torque to step past than the BLDC could supply under 7.4 V and 1 A, so the design would need a custom ~14:1 printed gearbox.</p>
+        </article>
+        <article class="fixture">
+          <div class="fixture-head"><span class="mono">Step 3</span><h3>Geneva drive</h3><span class="bad">✕ Added height, still geared</span></div>
+          <p class="prose">I designed 8- and 7-slot Geneva drives, which lock the disk mechanically between steps with no holding power. They added about 10 mm of height, though, and still needed gear reduction.</p>
+        </article>
+        <article class="fixture">
+          <div class="fixture-head"><span class="mono">Step 4</span><h3>Worm gearmotor</h3><span class="good">✓ Recommended</span></div>
+          <p class="prose">Once the BLDC needed its own gearbox, driver, encoder, and lock, those additions outweighed its benefits. I recommended a self-locking N20 worm gearmotor instead: it holds with no power, has a 10x+ torque margin, and is the thinnest of the options. Magnets and a hall sensor mark each position, so indexing errors can't accumulate from step to step.</p>
+        </article>
+        <article class="fixture">
+          <div class="fixture-head"><span class="mono">Step 5</span><h3>Mechanical and sensing</h3><span class="neutral">→ Prototyping now</span></div>
+          <p class="prose">The disk and shaft are printed in PLA and run on a 6800 bearing, with an E-clip holding the shaft in place and a PTFE floor under the disk to cut friction. A TAL221 load cell with an overload stop sits at the opening to detect pills. The whole mechanism is modeled parametrically in Onshape.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">04</span><h2>Skills</h2><span class="dim"></span></div>
+      <ul class="tags"><li>Mechanism Design</li><li>Torque &amp; FOS Analysis</li><li>Motor Selection</li><li>Gear Design</li><li>Design for FDM Printing</li><li>Bearing &amp; Shaft Design</li><li>Sensor Integration (Hall Effect, Load Cell)</li><li>Onshape</li></ul>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALLERY — click any photo to open it full size.
+       Duplicate a <figure> to add a photo; add class="is-cad"
+       to an <img> that's a CAD screenshot so it isn't cropped.
+       PLACEHOLDERS: swap each <div class="img-ph"> for an <img>
+       when the image is ready (placeholders don't open in the lightbox).
+       ========================================================= -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">05</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="figs gallery-grid">
+        <figure><div class="img-ph"><span class="mono">Image coming soon</span><b>Section view</b></div><figcaption><span class="mono">Fig. 1</span>Section view through the shaft and bearing</figcaption></figure>
+        <figure><div class="img-ph"><span class="mono">Image coming soon</span><b>Load cell layout</b></div><figcaption><span class="mono">Fig. 2</span>Top view of the load cell layout at the access opening</figcaption></figure>
+        <figure><div class="img-ph"><span class="mono">Image coming soon</span><b>Prototype photo</b></div><figcaption><span class="mono">Fig. 3</span>Prototype photo (to be added)</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">06</span><h2>Next steps</h2><span class="dim"></span></div>
+      <div class="prose prose--center">
+        <p>Next, I'll build the prototype and test it for indexing time, position repeatability, holding under vibration, and pill-detection reliability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREV / NEXT PROJECT -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <nav class="pager">
+        <a href="project-04.html"><span class="mono">← Previous · 05</span>DIY Nerf Gun</a>
+        <a href="projects.html"><span class="mono">All projects →</span>Back to projects</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- TITLE-BLOCK FOOTER (styled like an engineering drawing's title block) -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="tb">
+        <div><span class="mono">Drawn by</span><span class="name">Ryan Heberlig</span></div>
+        <div><span class="mono">Email</span><a class="v" href="mailto:heberlig.r@northeastern.edu">heberlig.r@northeastern.edu</a></div>
+        <div><span class="mono">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/ryanheberlig/" target="_blank" rel="noopener">/in/ryanheberlig</a></div>
+        <div><span class="mono">Sheet</span><span class="v">06 of 06 · Rev 2026</span></div>
+      </div>
+      <p class="mono fine">&copy; 2026 Ryan Heberlig · Boston, MA</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
