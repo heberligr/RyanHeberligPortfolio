@@ -499,7 +499,14 @@ a { color: inherit; text-decoration: none; }
 .fixture-head h3 { font-size: 1.5rem; font-weight: 800; }
 .fixture .par { margin-top: 20px; }
 .fixture .par p { margin-top: 8px; }
+.fixture > .prose { margin-top: 12px; }
 .note { margin-top: 24px; }
+
+/* requirements list: label on the left, spec on the right */
+.reqs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink-soft); }
+.reqs li { display: grid; grid-template-columns: 220px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.reqs .v { font-weight: 600; }
+
 
 
 /* -------------------------------------------------------------
@@ -739,6 +746,7 @@ a { color: inherit; text-decoration: none; }
   .p-media--single video { height: 480px; }
 
   .par, .timeline, .figs { grid-template-columns: 1fr; }
+  .reqs li { grid-template-columns: 1fr; gap: 4px; }
   .pager { grid-template-columns: 1fr; }
   .pager a:last-child { text-align: left; }
 
