@@ -102,8 +102,8 @@
           <p class="prose">I ran torque and factor-of-safety calculations on a detent hold. Detents strong enough to resist bumps needed more torque to step past than the BLDC could supply under 7.4 V and 1 A, so the design would need a custom ~14:1 printed gearbox.</p>
         </article>
         <article class="fixture">
-          <div class="fixture-head"><span class="mono">Step 3</span><h3>Geneva drive</h3><span class="bad">✕ Added height, still geared</span></div>
-          <p class="prose">I designed 8- and 7-slot Geneva drives, which lock the disk mechanically between steps with no holding power. They added about 10 mm of height, though, and still needed gear reduction.</p>
+          <div class="fixture-head"><span class="mono">Step 3</span><h3>Geneva drive</h3><span class="bad">✕ Added height and complexity</span></div>
+          <p class="prose">I designed 8- and 7-slot Geneva drives, which lock the disk mechanically with no holding power and could be driven directly by the BLDC under FOC. They added about 10 mm of height and a custom mechanism, though, and still required the FOC driver and encoder.</p>
         </article>
         <article class="fixture">
           <div class="fixture-head"><span class="mono">Step 4</span><h3>Worm gearmotor</h3><span class="good">✓ Recommended</span></div>
