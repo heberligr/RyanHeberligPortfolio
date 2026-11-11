@@ -68,12 +68,27 @@
   </section>
 
   <!-- =========================================================
+       KEY DECISION
+       Same layout as a design step, with Problem / Recommendation /
+       Outcome cards underneath.
+       ========================================================= -->
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">02</span><h2>Key decision</h2><span class="dim"></span></div>
+      <article class="fixture">
+        <div class="fixture-head"><span class="mono">Scope</span><h3>Dose-based design</h3><span class="good">✓ Adopted as the new scope</span></div>
+        <div class="par"><div><span class="mono">Original scope</span><p>The travel unit was meant to dispense one pill at a time, sized for a single standard capsule. Most users take several pills per dose, so a one-pill mechanism would need to cycle repeatedly, and fixing one pill size would exclude many medications.</p></div><div><span class="mono">Recommendation</span><p>I recommended storing complete doses instead: each compartment holds a pre-sorted dose of 1–4 pills, and the disk presents one full dose per index.</p></div><div><span class="mono">Outcome</span><p>The team adopted this as the new scope. It handles mixed pill sizes, simplifies the mechanism to one move per dose, and makes the unit easier to scale to different regimens.</p></div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========================================================
        REQUIREMENTS
        One <li> per requirement: label on the left, spec on the right.
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">02</span><h2>Requirements</h2><span class="dim"></span><span class="mono">5 requirements</span></div>
+      <div class="sec-head"><span class="mono">03</span><h2>Requirements</h2><span class="dim"></span><span class="mono">5 requirements</span></div>
       <ul class="reqs">
         <li><span class="mono">Size</span><span class="v">Portable, with a disk about 90 mm across</span></li>
         <li><span class="mono">Power</span><span class="v">Battery powered: 7.4 V, at most 1 A per phase</span></li>
@@ -91,7 +106,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">03</span><h2>Design approach</h2><span class="dim"></span><span class="mono">5 steps</span></div>
+      <div class="sec-head"><span class="mono">04</span><h2>Design approach</h2><span class="dim"></span><span class="mono">5 steps</span></div>
       <div class="fixtures">
         <article class="fixture">
           <div class="fixture-head"><span class="mono">Step 1</span><h3>BLDC starting point</h3><span class="bad">✕ Can't hold unpowered</span></div>
@@ -120,7 +135,7 @@
   <!-- SKILLS -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">04</span><h2>Skills</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">05</span><h2>Skills</h2><span class="dim"></span></div>
       <ul class="tags"><li>Mechanism Design</li><li>Torque &amp; FOS Analysis</li><li>Motor Selection</li><li>Gear Design</li><li>Design for FDM Printing</li><li>Bearing &amp; Shaft Design</li><li>Sensor Integration (Hall Effect, Load Cell)</li><li>Onshape</li></ul>
     </div>
   </section>
@@ -132,7 +147,7 @@
        ========================================================= -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">05</span><h2>Gallery</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">06</span><h2>Gallery</h2><span class="dim"></span></div>
       <div class="figs gallery-grid">
         <figure><img src="pill-gallery-housing.png" class="is-cad" alt="CAD render of the housing with the motor mount on top and mounting tabs around the edge"><figcaption><span class="mono">Fig. 1</span>CAD render of the housing and motor mount</figcaption></figure>
         <figure><img src="pill-gallery-loadcell.png" class="is-cad" alt="CAD view of the housing floor showing the TAL221 load cell and the 6800 bearing at the center"><figcaption><span class="mono">Fig. 2</span>Load cell layout and the 6800 bearing at the shaft</figcaption></figure>
@@ -144,7 +159,7 @@
   <!-- NEXT STEPS -->
   <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">06</span><h2>Next steps</h2><span class="dim"></span></div>
+      <div class="sec-head"><span class="mono">07</span><h2>Next steps</h2><span class="dim"></span></div>
       <div class="prose prose--center">
         <p>Next, I'll build the prototype and test it for indexing time, position repeatability, holding under vibration, and pill-detection reliability.</p>
       </div>
