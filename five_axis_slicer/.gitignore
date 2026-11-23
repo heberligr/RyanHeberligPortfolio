@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# Polyscope writes this next to wherever you launch it
+imgui.ini
+# Temporary slicer output (later milestones)
+tmp/
+output/

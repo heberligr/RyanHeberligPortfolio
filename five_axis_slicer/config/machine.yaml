@@ -1,0 +1,128 @@
+# =============================================================================
+# machine.yaml - description of YOUR 5-axis printer.
+#
+# Every value marked "FILL IN" is a placeholder default. Measure / look up the
+# real value for your machine before printing anything. The app never guesses
+# silently: if you leave a default, it is used exactly as written here.
+#
+# Coordinate conventions used everywhere in the code:
+#   * "Part frame"    = the frame of the rotary table when A = 0 and C = 0.
+#                       When A = C = 0 the part frame and machine frame coincide.
+#   * "Machine frame" = the XYZ coordinates sent to the firmware.
+#   * All lengths in mm, all angles in degrees, feedrates in mm/min (or deg/min).
+# =============================================================================
+
+name: "DIY 5-axis FDM"
+
+# FILL IN: one of marlin | reprapfirmware | klipper.
+# The app always outputs plain joint coordinates (X Y Z A C), never TCP mode,
+# so this only affects small syntax details in later milestones.
+firmware: marlin
+
+kinematics:
+  # FILL IN if different. Only "table_tilting_AC" is implemented:
+  #   A axis tilts the table about the machine X axis,
+  #   C axis rotates the table about its own Z axis (mounted ON the A trunnion).
+  # Forward kinematics:  machine = R_A(a) * R_C(c) * (p - pivot) + pivot
+  type: table_tilting_AC
+
+  # FILL IN: machine XYZ of the point where the A and C axes intersect.
+  # See README "Calibrating the pivot point". Getting this wrong makes every
+  # tilted segment land in the wrong place.
+  pivot: [0.0, 0.0, 0.0]
+
+  a_axis:
+    letter: A          # G-code letter for the tilt axis
+    # FILL IN: +1 if a positive A command rotates the table by the right-hand
+    # rule about +X (thumb along +X, fingers curl = positive). -1 if opposite.
+    sign: 1
+    min_deg: -90.0     # FILL IN: commanded-angle travel limits
+    max_deg: 90.0
+
+  c_axis:
+    letter: C          # G-code letter for the rotary axis
+    # FILL IN: +1 if a positive C command rotates the table counter-clockwise
+    # when viewed from above (right-hand rule about +Z). -1 if clockwise.
+    sign: 1
+    # FILL IN: true if C can spin forever (slip ring / no cables to wind up).
+    # If false, min_deg/max_deg are enforced.
+    continuous: true
+    min_deg: -360.0
+    max_deg: 360.0
+
+# FILL IN: linear travel limits of the machine (commanded machine coordinates).
+limits:
+  x: [-100.0, 100.0]
+  y: [-100.0, 100.0]
+  z: [0.0, 200.0]
+
+# The rotary table (print bed). It moves with the part, so in the part frame it
+# is a fixed obstacle that the hotend must not hit.
+table:
+  shape: round          # FILL IN: round | rect
+  diameter: 150.0       # used if shape = round
+  size_x: 150.0         # used if shape = rect
+  size_y: 150.0
+  thickness: 10.0       # modelled thickness below the surface (for collisions)
+  # FILL IN: machine Z of the table top surface at A = 0. Often the pivot is
+  # placed at (or near) the table surface so tilting does not swing the part far.
+  surface_z: 0.0
+
+# Hotend collision model. Tool frame: tip of the nozzle at the origin, tool axis
+# pointing UP (away from the part). All of this is a rough envelope - make it
+# slightly larger than the real hardware.
+hotend:
+  # FILL IN: cone starting at the nozzle tip (the nozzle + bottom of heater block)
+  cone_half_angle_deg: 40.0
+  cone_height: 8.0
+  # FILL IN: cylinder for heater block / part-cooling fan / carriage
+  cylinder_radius: 25.0
+  cylinder_start: 8.0   # distance from tip to the bottom of the cylinder
+  cylinder_height: 60.0
+  # Extra safety gap added around the whole model (mm).
+  clearance: 1.0
+  # Points closer than this to the tip ALONG the tool axis are ignored. Without
+  # this, the surface the nozzle is printing onto would count as a collision.
+  tip_ignore_height: 0.3
+
+collision:
+  # Obstacles are turned into surface point samples this far apart (mm).
+  # Smaller = more accurate and slower. The check inflates the hotend model by
+  # ~0.6 x this value so nothing slips between samples.
+  sample_spacing: 1.0
+
+# Motion used for transitions between segments (milestone 5).
+motion:
+  safe_retract_distance: 10.0   # FILL IN: back off along tool axis before rotating (mm)
+  safe_z: 150.0                 # FILL IN: machine Z to rotate at (must clear the part)
+  travel_feedrate: 6000.0       # mm/min
+  rotary_feedrate: 1800.0       # deg/min (FILL IN: what your rotary axes can do)
+  retract_length: 0.8           # mm of filament
+  retract_feedrate: 2400.0      # mm/min
+
+# Start / end G-code (milestone 5). Edit freely. Plain text, copied verbatim.
+start_gcode: |
+  ; ---- start block (edit in machine.yaml) ----
+  G21                ; mm
+  G90                ; absolute XYZ + rotary
+  M83                ; relative extrusion
+  G28                ; home (FILL IN: does your firmware home A/C too?)
+  G0 A0 C0           ; rotary axes to zero
+  M140 S60           ; bed temp
+  M104 S210          ; hotend temp
+  M190 S60
+  M109 S210
+  ; prime line on the bed at A=0 C=0 (FILL IN coordinates for your bed)
+  G0 X-60 Y-60 Z0.3 F6000
+  G1 X60 E15 F1200
+  G1 Z2 F600
+end_gcode: |
+  ; ---- end block (edit in machine.yaml) ----
+  G1 E-2 F2400       ; retract
+  G91
+  G0 Z20 F3000       ; lift
+  G90
+  G0 A0 C0           ; level the table
+  M104 S0
+  M140 S0
+  M84

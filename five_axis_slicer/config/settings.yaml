@@ -1,0 +1,13 @@
+# =============================================================================
+# settings.yaml - software settings (not machine geometry).
+# =============================================================================
+
+# FILL IN: full path to the PrusaSlicer executable / console binary.
+#   Windows example: "C:/Program Files/Prusa3D/PrusaSlicer/prusa-slicer-console.exe"
+#   macOS example:   "/Applications/PrusaSlicer.app/Contents/MacOS/PrusaSlicer"
+#   Linux example:   "/usr/bin/prusa-slicer"
+# Used from milestone 4 onward.
+prusaslicer_path: "prusa-slicer"
+
+# Overhang threshold (degrees), used from milestone 2 onward.
+overhang_angle_deg: 50.0
