@@ -7,3 +7,4 @@ imgui.ini
 # Temporary slicer output (later milestones)
 tmp/
 output/
+.polyscope.ini
