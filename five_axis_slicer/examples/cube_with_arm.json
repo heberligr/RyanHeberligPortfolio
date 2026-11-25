@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "model": {
+    "demo": "Cube with arm",
+    "place_on_bed": true
+  },
+  "overhang_angle_deg": 50.0,
+  "cuts": [
+    {
+      "name": "arm",
+      "point": [
+        -2.5,
+        0.0,
+        14.0
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "local": false,
+      "components": null
+    }
+  ]
+}
